@@ -55,6 +55,12 @@ Brief: interactive, punchy scroll story of one survivor's real TFGBV case in Ban
 - qa.py changes: test_unverified_legal ("police must record it" was cut with the list); test_dots rewritten for the crowd. 29/29.
 - To review: the scales and handcuffs are the designers' symbols; feet shadows and knocks dramatise "came to her door"; the crowd is not to scale; new in-art labels are all taken from existing page text. Unused: il-13.svg, assets/dots-fallback.png, old .promise rules in story.css. Not tested on a real Android phone.
 
+### Session 3c — 19 Nov 2026
+- Mir's name is removed from the visible byline and footer (it stays in meta and JSON-LD); the date is removed from the hero. The hero type scales with the screen. Scroll pacing is tighter (page ~12% shorter).
+- Footer in TGI house style: logo, tagline, social icons, copyright.
+- SEO: full meta, OG and Twitter tags, plus a JSON-LD @graph (NewsArticle + Organization). Share image `site/assets/og-image.jpg` is the hero without text (regenerate with `python tools/og_image.py`). **Canonical/OG base URL is assumed: https://investigations.techglobalinstitute.com/tfgbv/ — confirm before launch.**
+- Preview: `python tools/serve.py 8765` (no-cache). Repo: github.com/mir-17101088/tfgbv (survivor originals are gitignored).
+
 ## Open questions (need Mir / survivor / TGI)
 1. ~~Naming~~ (interim decided — see session 1b). **Naming the survivor**: she is named in the doc (and spoke publicly at ActionAid/Prothom Alo and Naripokkho events). Real name, first name only, or pseudonym? Her written consent should cover the name too, not just photos.
 2. **Naming the accused / officials**: accused not convicted (trial ongoing) — recommend not naming him or showing his account URL; recommend titles only for police (SI, ADC), no names. Phone number in the timeline must never be published. TGI legal sign-off?

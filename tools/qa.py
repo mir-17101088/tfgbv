@@ -115,7 +115,7 @@ def test_no_identity_leak():
     for f in SITE.rglob("*"):
         if f.is_dir():
             continue
-        if f.suffix.lower() in (".jpeg", ".jpg"):
+        if f.suffix.lower() in (".jpeg", ".jpg") and f.relative_to(SITE).as_posix() != "assets/og-image.jpg":  # generated share image is allowed
             bad.append(f"original-format image: {f}")
         if f.suffix.lower() in (".html", ".css", ".js", ".json", ".svg", ".txt", ".xml"):
             t = f.read_text(encoding="utf-8", errors="ignore")
@@ -353,15 +353,16 @@ def test_meta():
         g = lambda sel, a="content": p.get_attribute(sel, a)
         assert g('meta[property="og:title"]')
         img = g('meta[property="og:image"]')
-        assert img and img.endswith("share.png"), img
-        assert Image.open(SITE / "assets" / "share.png").size == (1200, 630)
+        assert img and img.endswith("og-image.jpg") and img.startswith("https://"), img
+        assert Image.open(SITE / "assets" / "og-image.jpg").size == (1200, 630)
         assert g('meta[name="twitter:card"]') == "summary_large_image"
         assert g('link[rel="canonical"]', "href")
         assert g('meta[name="description"]')
         ld = json.loads(p.text_content('script[type="application/ld+json"]'))
-        assert ld["@type"] == "NewsArticle"
-        assert ld["author"]["name"] == "Mir Rownak", ld["author"]
-        assert ld["publisher"]["name"] == "Tech Global Institute"
+        art = [n for n in ld["@graph"] if n["@type"] == "NewsArticle"][0]
+        org = [n for n in ld["@graph"] if n["@type"] == "Organization"][0]
+        assert art["author"]["name"] == "Mir Rownak", art["author"]
+        assert art["publisher"]["@id"] == org["@id"] and org["name"] == "Tech Global Institute"
 
 
 @check
