@@ -1,0 +1,103 @@
+<svg viewBox="0 0 760 1040" role="img" aria-labelledby="il03t" xmlns="http://www.w3.org/2000/svg">
+<title id="il03t">Illustration: a giant pair of scales. On one pan, everything she was told to hand over piles up to the hook: the form with her name, address, age, profession, father's name, phone and National ID; the GD from Darus Salam; the GD copy; her requests for updates; the screenshots, again; the Block button; the GD officer's number. The beam tips further with every item. The other pan holds only replies that weigh nothing: No reply. No reply. She will be informed. It will be reported again.</title>
+<!-- room -->
+<circle cx="380" cy="560" r="500" fill="#EEF4F2"/>
+<rect x="-1400" y="1000" width="3560" height="700" class="f-gray"/>
+<path class="s" d="M-1400 1000 H2160"/>
+<!-- date, top left -->
+<text x="12" y="58" class="il03-date" style="font:800 44px var(--font-display);fill:#246E72">17 Nov</text>
+<!-- dial -->
+<path class="s s-th o-50" d="M302 85 A90 90 0 0 1 458 85 M325 66 L333 74 M351 50 L355 60 M380 40 V52 M409 50 L405 60 M435 66 L427 74"/>
+<!-- stand -->
+<rect x="368" y="130" width="24" height="830" class="f-deep"/><path class="s" d="M368 140 V960 M392 140 V960"/>
+<path class="f-teal" d="M290 1000 L322 952 H438 L470 1000 Z"/><path class="s" d="M290 1000 L322 952 H438 L470 1000"/>
+<!-- friends' advice (step 0) -->
+<g class="il03-friends">
+<path class="f-white" d="M42 836 H282 Q296 836 296 850 V880 Q296 894 282 894 H130 L104 918 L110 894 H42 Q28 894 28 880 V850 Q28 836 42 836 Z"/>
+<path class="s s-th" d="M42 836 H282 Q296 836 296 850 V880 Q296 894 282 894 H130 L104 918 L110 894 H42 Q28 894 28 880 V850 Q28 836 42 836 Z"/>
+<text x="162" y="873" text-anchor="middle" class="t" style="font:800 21px var(--font-display)">Cyber Crime Unit</text>
+<g class="f-sage"><circle cx="80" cy="950" r="20"/><path d="M48 1000 C48 978 60 970 80 970 C100 970 112 978 112 1000 Z"/><circle cx="140" cy="942" r="21"/><path d="M106 1000 C106 972 120 962 140 962 C160 962 174 972 174 1000 Z"/><circle cx="200" cy="952" r="19"/><path d="M170 1000 C170 980 182 972 200 972 C218 972 230 980 230 1000 Z"/></g>
+<path class="s s-th" d="M60 950 A20 20 0 0 1 100 950 M119 942 A21 21 0 0 1 161 942 M181 952 A19 19 0 0 1 219 952"/>
+</g>
+<!-- the beam (rotates) -->
+<g class="il03-beam">
+<path class="f-ink" d="M380 130 L372 64 L380 34 L388 64 Z"/>
+<rect x="118" y="122" width="524" height="16" rx="8" class="f-deep"/><rect x="118" y="122" width="524" height="16" rx="8" class="s"/>
+<circle cx="130" cy="130" r="9" class="f-white"/><circle cx="130" cy="130" r="9" class="s"/>
+<circle cx="630" cy="130" r="9" class="f-white"/><circle cx="630" cy="130" r="9" class="s"/>
+</g>
+<circle cx="380" cy="130" r="15" class="f-ink"/><circle cx="380" cy="130" r="5" class="f-mint"/>
+<!-- HER PAN: everything she is told to hand over -->
+<g class="il03-pan il03-pan--l">
+<path class="s s-th" d="M130 130 L-8 740 M130 130 L268 740 M130 130 V740"/>
+<g transform="translate(130 740) scale(1.15) translate(-130 -740)">
+<!-- 1: the form: name, address, age, profession, father's name, phone, National ID -->
+<g class="c" data-k="1"><g transform="rotate(-2 130 668)">
+<rect x="22" y="598" width="216" height="140" class="f-white"/><rect x="22" y="598" width="216" height="140" class="s"/>
+<rect x="22" y="598" width="216" height="28" class="f-teal"/>
+<text x="130" y="618" text-anchor="middle" style="font:800 15px var(--font-display);fill:#fff;letter-spacing:.06em">PCSW</text>
+<g class="t" style="font-size:13px"><text x="32" y="646">Name</text><text x="32" y="668">Address</text><text x="32" y="690">Age</text><text x="32" y="712">Profession</text>
+<text x="134" y="646">Father&#8217;s name</text><text x="134" y="668">Phone</text><text x="134" y="690">National ID</text></g>
+<path class="s s-th o-50" d="M70 650 H124 M88 672 H124 M62 694 H124 M106 716 H124 M134 716 H226"/>
+</g></g>
+<!-- 2: the GD, Darus Salam -->
+<g class="c" data-k="2"><g transform="translate(0 18) rotate(5 132 552)">
+<rect x="44" y="494" width="176" height="114" class="f-paper"/><rect x="44" y="494" width="176" height="114" class="s"/>
+<text x="132" y="532" text-anchor="middle" class="t" style="font:800 30px var(--font-display)">GD</text>
+<text x="132" y="556" text-anchor="middle" class="t-m" style="font-size:15px">Darus Salam</text>
+<path class="s s-th o-50" d="M60 574 H204 M60 588 H190 M60 600 H198"/>
+</g></g>
+<!-- 3: send PCSW everything: the information, the GD copy -->
+<g class="c" data-k="3"><g transform="translate(0 28) rotate(-4 134 462)">
+<rect x="30" y="432" width="204" height="70" class="f-white"/><rect x="30" y="432" width="204" height="70" class="s"/>
+<rect x="40" y="422" width="204" height="70" class="f-white"/><rect x="40" y="422" width="204" height="70" class="s"/>
+<text x="62" y="452" class="t" style="font:800 17px var(--font-display)">GD copy</text>
+<path class="s s-th o-50" d="M62 466 H150 M62 478 H136"/>
+<path d="M196 422 V492 M164 457 H244" stroke="#246E72" stroke-width="4" fill="none"/>
+<circle cx="196" cy="457" r="6" class="f-teal"/>
+</g></g>
+<!-- 4: ask for an update, 26 / 27 / 28 Oct -->
+<g class="c" data-k="4"><g transform="translate(0 38)">
+<rect x="66" y="392" width="132" height="30" rx="15" class="f-teal"/><text x="132" y="413" text-anchor="middle" style="font:700 16px var(--font-mono);fill:#fff">26 Oct</text>
+<rect x="88" y="360" width="132" height="30" rx="15" class="f-teal"/><text x="154" y="381" text-anchor="middle" style="font:700 16px var(--font-mono);fill:#fff">27 Oct</text>
+<rect x="52" y="328" width="132" height="30" rx="15" class="f-teal"/><text x="118" y="349" text-anchor="middle" style="font:700 16px var(--font-mono);fill:#fff">28 Oct</text>
+</g></g>
+<!-- 5: all the screenshots, again -->
+<g class="c" data-k="5"><g transform="translate(0 52)">
+<g transform="rotate(-14 54 324)"><rect x="28" y="230" width="54" height="92" rx="6" class="f-white"/><rect x="28" y="230" width="54" height="92" rx="6" class="s"/><rect x="36" y="242" width="38" height="30" fill="#9AA7A5"/><path d="M36 284 H70 M36 296 H62 M36 308 H72" stroke="#C7D0CE" stroke-width="6" stroke-linecap="round"/></g>
+<g transform="rotate(-7 94 324)"><rect x="68" y="230" width="54" height="92" rx="6" class="f-white"/><rect x="68" y="230" width="54" height="92" rx="6" class="s"/><path d="M76 246 H110 M76 260 H100 M76 274 H114" stroke="#C7D0CE" stroke-width="6" stroke-linecap="round"/><rect x="76" y="286" width="38" height="26" fill="#9AA7A5"/></g>
+<g><rect x="104" y="226" width="54" height="92" rx="6" class="f-white"/><rect x="104" y="226" width="54" height="92" rx="6" class="s"/><rect x="112" y="238" width="38" height="34" fill="#9AA7A5"/><path d="M112 284 H146 M112 298 H136" stroke="#C7D0CE" stroke-width="6" stroke-linecap="round"/></g>
+<g transform="rotate(7 166 324)"><rect x="140" y="230" width="54" height="92" rx="6" class="f-white"/><rect x="140" y="230" width="54" height="92" rx="6" class="s"/><path d="M148 246 H182 M148 260 H170" stroke="#C7D0CE" stroke-width="6" stroke-linecap="round"/><rect x="148" y="272" width="38" height="38" fill="#9AA7A5"/></g>
+<g transform="rotate(14 206 324)"><rect x="178" y="230" width="54" height="92" rx="6" class="f-white"/><rect x="178" y="230" width="54" height="92" rx="6" class="s"/><rect x="186" y="242" width="38" height="30" fill="#9AA7A5"/><path d="M186 284 H220 M186 298 H208" stroke="#C7D0CE" stroke-width="6" stroke-linecap="round"/></g>
+</g></g>
+<!-- 6: block him -->
+<g class="c" data-k="6"><g transform="translate(0 62) rotate(-3 130 206)">
+<rect x="50" y="184" width="160" height="42" rx="10" class="f-alarm"/>
+<text x="130" y="213" text-anchor="middle" style="font:800 21px var(--font-display);fill:#fff;letter-spacing:.08em">BLOCK</text>
+</g></g>
+<!-- 7: the GD officer's number -->
+<g class="c" data-k="7"><g transform="translate(0 70) rotate(4 130 160)">
+<rect x="40" y="142" width="180" height="38" class="f-white"/><rect x="40" y="142" width="180" height="38" class="s"/>
+<g class="f-ink"><circle cx="70" cy="161" r="4.5"/><circle cx="90" cy="161" r="4.5"/><circle cx="110" cy="161" r="4.5"/><circle cx="130" cy="161" r="4.5"/><circle cx="150" cy="161" r="4.5"/><circle cx="170" cy="161" r="4.5"/><circle cx="190" cy="161" r="4.5"/></g>
+</g></g>
+<path class="f-teal" d="M10 740 H250 Q244 792 130 794 Q16 792 10 740 Z"/><path class="s" d="M10 740 H250 Q244 792 130 794 Q16 792 10 740 Z"/>
+</g></g>
+<!-- THEIR PAN: what comes back -->
+<g class="il03-pan il03-pan--r">
+<path class="s s-th" d="M630 130 L492 740 M630 130 L768 740 M630 130 V740"/>
+<g transform="translate(630 740) scale(1.15) translate(-630 -740)">
+<g class="c" data-k="4">
+<rect x="514" y="700" width="112" height="34" rx="17" class="f-white"/><rect x="514" y="700" width="112" height="34" rx="17" class="s s-th s-dash" style="color:#5C6B6A"/>
+<text x="570" y="723" text-anchor="middle" style="font:700 16px var(--font-body);fill:#5C6B6A">No reply.</text>
+<rect x="634" y="700" width="112" height="34" rx="17" class="f-white"/><rect x="634" y="700" width="112" height="34" rx="17" class="s s-th s-dash" style="color:#5C6B6A"/>
+<text x="690" y="723" text-anchor="middle" style="font:700 16px var(--font-body);fill:#5C6B6A">No reply.</text>
+<rect x="520" y="634" width="224" height="58" rx="12" class="f-gray"/><rect x="520" y="634" width="224" height="58" rx="12" class="s s-th"/>
+<text x="534" y="658" class="t" style="font-size:15px">She will be informed;</text><text x="534" y="680" class="t" style="font-size:15px">fact-finding takes time.</text>
+</g>
+<g class="c" data-k="5">
+<rect x="530" y="572" width="200" height="56" rx="12" class="f-gray"/><rect x="530" y="572" width="200" height="56" rx="12" class="s s-th"/>
+<text x="544" y="596" class="t" style="font-size:15px">&#8220;It will be reported</text><text x="544" y="618" class="t" style="font-size:15px">again.&#8221;</text>
+</g>
+<path class="f-teal" d="M510 740 H750 Q744 792 630 794 Q516 792 510 740 Z"/><path class="s" d="M510 740 H750 Q744 792 630 794 Q516 792 510 740 Z"/>
+</g></g>
+</svg>

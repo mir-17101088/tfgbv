@@ -1,0 +1,18 @@
+<svg viewBox="0 0 300 220" role="img" aria-labelledby="il05t" xmlns="http://www.w3.org/2000/svg">
+<title id="il05t">Illustration: an empty plastic chair under a wall clock, with the waits marked: 30 minutes, 3 hours, 50 minutes.</title>
+<!-- clock -->
+<circle cx="150" cy="54" r="40" class="f-white"/><circle cx="150" cy="54" r="40" class="s"/>
+<path class="s s-th o-50" d="M150 18 v6 M150 84 v6 M114 54 h6 M180 54 h6"/>
+<path class="s" d="M150 54 L150 28 M150 54 L168 64"/>
+<text x="58" y="34" class="t-m" style="font-size:11px">30 min</text>
+<text x="200" y="28" class="t-m" style="font-size:11px">3 hours</text>
+<text x="206" y="86" class="t-m" style="font-size:11px">50 min</text>
+<!-- chair -->
+<path class="f-aqua" d="M118 128 L184 126 L182 150 L120 152 Z"/>
+<path class="s" d="M118 128 L184 126 L182 150 L120 152 Z M124 152 L116 210 M178 150 L188 210 M128 128 L132 108 C150 102 168 102 176 106 L180 126"/>
+<!-- handbag on the chair -->
+<path class="f-teal" d="M136 128 C136 118 144 114 152 114 C160 114 166 118 166 128 Z"/>
+<path class="s s-th" d="M142 116 C142 106 160 106 160 116"/>
+<!-- floor -->
+<path class="s s-th o-50" d="M40 212 C120 208 200 210 270 212"/>
+</svg>

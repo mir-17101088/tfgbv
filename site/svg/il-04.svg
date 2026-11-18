@@ -1,0 +1,31 @@
+<svg viewBox="0 0 520 560" role="img" aria-labelledby="il04t" xmlns="http://www.w3.org/2000/svg">
+<title id="il04t">Map: in about 24 hours she is sent from Darus Salam police station to DMP, to the Detective Branch, and back to Darus Salam police station.</title>
+<rect width="520" height="560" class="f-paper"/>
+<path class="s s-th o-25" d="M0 470 C160 450 300 480 520 430 M100 0 C120 160 80 330 130 560 M0 200 C200 230 360 180 520 210 M400 0 C370 160 450 330 410 560"/>
+<path class="s s-dash s-teal o-50" d="M120 400 C110 290 170 200 250 150 C330 180 410 240 420 320 C350 400 240 430 160 432"/>
+<path class="s s-bold s-alarm draw" pathLength="1" d="M120 400 C110 290 170 200 250 150 C330 180 410 240 420 320 C350 400 240 430 160 432"/>
+<g class="b b-ds">
+ <path class="f-aqua" d="M62 396 L178 396 L176 472 L64 474 Z"/><path class="s" d="M62 396 L178 396 L176 472 L64 474 Z M56 398 L120 358 L184 398"/>
+ <path class="s s-th" d="M108 474 V440 H132 V474 M74 412 h20 v16 h-20z M146 412 h20 v16 h-20z"/>
+ <text x="120" y="502" text-anchor="middle" class="t" style="font-size:20px">Darus Salam</text>
+ <text x="120" y="524" text-anchor="middle" class="t" style="font-size:16px;font-weight:400">police station</text>
+</g>
+<g class="b b-dmp">
+ <path class="f-sage" d="M196 92 L300 92 L298 152 L198 154 Z"/><path class="s" d="M196 92 L300 92 L298 152 L198 154 Z M208 80 H288 V92 M216 106 v32 M238 106 v32 M260 106 v32 M282 106 v32"/>
+ <text x="248" y="68" text-anchor="middle" class="t" style="font-size:22px">DMP</text>
+</g>
+<g class="b b-db">
+ <path class="f-mint" d="M376 282 L464 280 L466 348 L378 350 Z"/><path class="s" d="M376 282 L464 280 L466 348 L378 350 Z M390 298 h22 v16 h-22z M428 298 h22 v16 h-22z M412 350 v-22 h18 v22"/>
+ <text x="420" y="376" text-anchor="middle" class="t" style="font-size:20px">DB</text>
+</g>
+<g class="t-m" style="font-size:15px">
+ <text x="20" y="330" class="lbl lbl-0">29 Nov, night</text>
+ <text x="96" y="182" class="lbl lbl-1">30 Nov 2:00</text>
+ <text x="356" y="210" class="lbl lbl-2">2:30</text>
+ <text x="250" y="400" class="lbl lbl-3">3:26</text>
+</g>
+<g class="said-b said-0"><rect x="10" y="236" width="170" height="44" rx="10" class="f-white"/><rect x="10" y="236" width="170" height="44" rx="10" class="s s-th"/><text x="22" y="265" class="t" style="font-size:19px">&#8220;Go to DMP.&#8221;</text></g>
+<g class="said-b said-1"><rect x="318" y="96" width="160" height="44" rx="10" class="f-white"/><rect x="318" y="96" width="160" height="44" rx="10" class="s s-th"/><text x="332" y="125" class="t" style="font-size:19px">&#8220;Go to DB.&#8221;</text></g>
+<g class="said-b said-2"><rect x="250" y="420" width="260" height="44" rx="10" class="f-white"/><rect x="250" y="420" width="260" height="44" rx="10" class="s s-th"/><text x="262" y="449" class="t" style="font-size:18px">&#8220;Your nearest station.&#8221;</text></g>
+<g class="said-b said-3"><rect x="200" y="490" width="310" height="48" rx="10" class="f-white"/><rect x="200" y="490" width="310" height="48" rx="10" class="s s-alarm"/><text x="214" y="521" class="t" style="font-size:19px">&#8220;Go home. We&#8217;ll call you.&#8221;</text></g>
+</svg>

@@ -1,0 +1,252 @@
+{
+ "_note": "Boxes are [x0,y0,x1,y1] in source pixels. kinds: blur (media/photos), bar (explicit text), label (cover + caption). Screenshot 4 dropped: duplicate of 1 + 5 content (ledger ruling). profile (6.jpeg) removed 18 Nov: unused on page.",
+ "msg-1": {
+  "src": "1.jpeg",
+  "alt": "Messenger screenshot (evening): an obscene cartoon image, blurred, followed by a long sexually explicit proposition, hidden.",
+  "boxes": [
+   {
+    "kind": "blur",
+    "box": [
+     40,
+     34,
+     100,
+     82
+    ]
+   },
+   {
+    "kind": "fill",
+    "box": [
+     6,
+     340,
+     48,
+     640
+    ]
+   },
+   {
+    "kind": "blur",
+    "box": [
+     52,
+     84,
+     346,
+     366
+    ]
+   },
+   {
+    "kind": "bar",
+    "box": [
+     54,
+     418,
+     345,
+     630
+    ]
+   }
+  ]
+ },
+ "msg-2": {
+  "src": "3.jpeg",
+  "alt": "Messenger screenshot, the first night: the account's profile card (photo removed), then three obscene messages, hidden.",
+  "boxes": [
+   {
+    "kind": "blur",
+    "box": [
+     146,
+     114,
+     260,
+     226
+    ]
+   },
+   {
+    "kind": "fill",
+    "box": [
+     6,
+     455,
+     48,
+     600
+    ]
+   },
+   {
+    "kind": "bar",
+    "box": [
+     54,
+     468,
+     205,
+     506
+    ]
+   },
+   {
+    "kind": "bar",
+    "box": [
+     54,
+     507,
+     283,
+     547
+    ]
+   },
+   {
+    "kind": "bar",
+    "box": [
+     54,
+     556,
+     242,
+     597
+    ]
+   }
+  ]
+ },
+ "msg-3": {
+  "src": "2.jpeg",
+  "alt": "Messenger screenshot, 22 October: a forwarded pornographic video, blurred, and obscene messages at 5:01 and 6:30 PM, hidden.",
+  "boxes": [
+   {
+    "kind": "blur",
+    "box": [
+     40,
+     34,
+     100,
+     82
+    ]
+   },
+   {
+    "kind": "fill",
+    "box": [
+     6,
+     84,
+     48,
+     640
+    ]
+   },
+   {
+    "kind": "bar",
+    "box": [
+     54,
+     84,
+     242,
+     117
+    ]
+   },
+   {
+    "kind": "blur",
+    "box": [
+     50,
+     184,
+     338,
+     350
+    ]
+   },
+   {
+    "kind": "bar",
+    "box": [
+     54,
+     448,
+     333,
+     492
+    ]
+   },
+   {
+    "kind": "bar",
+    "box": [
+     54,
+     543,
+     163,
+     580
+    ]
+   },
+   {
+    "kind": "bar",
+    "box": [
+     54,
+     581,
+     262,
+     620
+    ]
+   }
+  ]
+ },
+ "msg-4": {
+  "src": "5.jpeg",
+  "alt": "Messenger screenshot, 22 and 30 October: more obscene messages, hidden.",
+  "boxes": [
+   {
+    "kind": "blur",
+    "box": [
+     40,
+     34,
+     100,
+     82
+    ]
+   },
+   {
+    "kind": "fill",
+    "box": [
+     6,
+     84,
+     48,
+     640
+    ]
+   },
+   {
+    "kind": "blur",
+    "box": [
+     50,
+     84,
+     338,
+     104
+    ]
+   },
+   {
+    "kind": "bar",
+    "box": [
+     54,
+     201,
+     333,
+     242
+    ]
+   },
+   {
+    "kind": "bar",
+    "box": [
+     54,
+     293,
+     163,
+     330
+    ]
+   },
+   {
+    "kind": "bar",
+    "box": [
+     54,
+     331,
+     262,
+     372
+    ]
+   },
+   {
+    "kind": "bar",
+    "box": [
+     54,
+     421,
+     272,
+     462
+    ]
+   },
+   {
+    "kind": "bar",
+    "box": [
+     54,
+     503,
+     155,
+     542
+    ]
+   },
+   {
+    "kind": "bar",
+    "box": [
+     54,
+     593,
+     203,
+     632
+    ]
+   }
+  ]
+ }
+}

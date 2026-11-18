@@ -1,0 +1,69 @@
+<svg viewBox="0 0 800 800" role="img" aria-labelledby="il10t" xmlns="http://www.w3.org/2000/svg">
+<title id="il10t">Illustration: on 29 November a call comes from Satkhira: the accused has been found. Then the law: under the Pornography Control Act 2012 the offence is cognizable and non-bailable (section 10), drawn as a pair of handcuffs, and section 5 measures the investigation out on a ruler: 30 working days, plus 15, plus 30, 75 working days at most.</title>
+<!-- 29 Nov: the call from Satkhira. Her hand holds the ringing phone; the bubble sits up top -->
+<g class="il10-call">
+<path class="f-white" d="M64 40 H736 Q764 40 764 68 V250 Q764 278 736 278 H452 L400 330 L404 278 H64 Q36 278 36 250 V68 Q36 40 64 40 Z"/>
+<path class="s" d="M64 40 H736 Q764 40 764 68 V250 Q764 278 736 278 H452 L400 330 L404 278 H64 Q36 278 36 250 V68 Q36 40 64 40 Z"/>
+<text x="400" y="148" text-anchor="middle" class="t" style="font:800 64px var(--font-display)">The accused</text>
+<text x="400" y="228" text-anchor="middle" class="t" style="font:800 64px var(--font-display)">has been found.</text>
+<path class="s s-teal" d="M548 420 C574 460 574 530 548 570 M584 392 C624 450 624 540 584 600 M620 364 C674 440 674 550 620 630"/>
+<path class="s s-teal" d="M252 420 C226 460 226 530 252 570 M216 392 C176 450 176 540 216 600 M180 364 C126 440 126 550 180 630"/>
+<g transform="rotate(-6 400 600)">
+<rect x="290" y="352" width="220" height="440" rx="30" class="f-ink"/>
+<rect x="304" y="384" width="192" height="380" rx="8" class="f-screen"/>
+<text x="400" y="430" text-anchor="middle" style="font:700 22px var(--font-mono);fill:#246E72">29 Nov</text>
+<text x="400" y="510" text-anchor="middle" class="t" style="font:800 38px var(--font-display)">Satkhira</text>
+<circle cx="350" cy="690" r="26" class="f-ink"/><circle cx="450" cy="690" r="26" class="f-teal"/>
+<path d="M440 690 H460 M450 680 V700" stroke="#fff" stroke-width="0"/>
+</g>
+<!-- her hand, from below (no face) -->
+<path class="f-deep" d="M250 800 L292 690 L392 712 L380 800 Z"/><path class="s" d="M250 800 L292 690 M392 712 L380 800"/>
+<path class="f-sage" d="M282 708 C270 660 280 610 304 594 L330 588 C338 620 340 664 336 706 C320 728 296 728 282 708 Z"/>
+<path class="s" d="M282 708 C270 660 280 610 304 594 L330 588 C338 620 340 664 336 706 C320 728 296 728 282 708 Z M292 650 C304 648 318 650 326 656 M290 676 C302 674 316 676 324 682"/>
+<path class="f-sage" d="M506 600 C522 604 528 618 520 628 L500 640 Z M510 650 C526 654 530 668 522 676 L500 686 Z"/>
+<path class="s" d="M500 602 C520 600 530 616 520 628 L500 640 M500 650 C522 650 530 666 522 676 L500 686"/>
+</g>
+<!-- the law -->
+<g class="il10-law">
+<text x="400" y="66" text-anchor="middle" class="t" style="font:800 34px var(--font-display)">Pornography Control Act 2012</text>
+<path class="s s-th o-50" d="M60 92 H740"/>
+<!-- s.10: cognizable, non-bailable -->
+<g class="il10-cuffs">
+<path d="M282 302 C300 300 310 310 314 316 M314 316 C322 324 332 330 340 330" stroke="#174D4F" stroke-width="7" fill="none" stroke-linecap="round"/>
+<ellipse cx="294" cy="303" rx="13" ry="7" transform="rotate(14 294 303)" fill="none" stroke="#10201F" stroke-width="2"/>
+<ellipse cx="314" cy="316" rx="13" ry="7" transform="rotate(40 314 316)" fill="none" stroke="#10201F" stroke-width="2"/>
+<ellipse cx="331" cy="327" rx="13" ry="7" transform="rotate(20 331 327)" fill="none" stroke="#10201F" stroke-width="2"/>
+<circle cx="200" cy="300" r="70" fill="none" stroke="#174D4F" stroke-width="22"/>
+<circle cx="200" cy="300" r="81" class="s"/><circle cx="200" cy="300" r="59" class="s"/>
+<rect x="100" y="276" width="34" height="48" rx="4" class="f-teal"/><rect x="100" y="276" width="34" height="48" rx="4" class="s"/><circle cx="117" cy="296" r="4" class="f-ink"/><path class="s s-th" d="M117 300 V310"/>
+<circle cx="420" cy="330" r="70" fill="none" stroke="#174D4F" stroke-width="22"/>
+<circle cx="420" cy="330" r="81" class="s"/><circle cx="420" cy="330" r="59" class="s"/>
+<rect x="396" y="396" width="48" height="34" rx="4" class="f-teal"/><rect x="396" y="396" width="48" height="34" rx="4" class="s"/><circle cx="420" cy="410" r="4" class="f-ink"/><path class="s s-th" d="M420 414 V422"/>
+<!-- the tag -->
+<path class="s s-th" d="M492 300 C510 286 526 282 548 282"/>
+<path class="f-paper" d="M548 232 H762 Q772 232 772 242 V376 Q772 386 762 386 H548 L522 352 V266 Z"/>
+<path class="s" d="M548 232 H762 Q772 232 772 242 V376 Q772 386 762 386 H548 L522 352 V266 Z"/>
+<circle cx="546" cy="282" r="7" class="s"/>
+<text x="572" y="276" class="t-m" style="font-size:22px;fill:#246E72">s.10</text>
+<text x="572" y="320" class="t" style="font:800 28px var(--font-display)">cognizable,</text>
+<text x="572" y="358" class="t" style="font:800 28px var(--font-display)">non-bailable</text>
+</g>
+<!-- s.5: the ruler -->
+<g class="il10-ruler">
+<text x="184" y="492" text-anchor="middle" class="t" style="font:800 30px var(--font-display);fill:#246E72">30</text>
+<text x="400" y="492" text-anchor="middle" class="t" style="font:800 30px var(--font-display);fill:#1C7D84">+ 15</text>
+<text x="616" y="492" text-anchor="middle" class="t" style="font:800 30px var(--font-display);fill:#246E72">+ 30</text>
+<rect x="24" y="508" width="752" height="96" rx="6" class="f-paper"/><rect x="24" y="508" width="752" height="96" rx="6" class="s"/>
+<rect class="il10-seg il10-seg--1 f-teal" x="40" y="570" width="288" height="24"/>
+<rect class="il10-seg il10-seg--2 f-ocean" x="328" y="570" width="144" height="24"/>
+<rect class="il10-seg il10-seg--3 f-mint" x="472" y="570" width="288" height="24"/>
+<path class="s s-th" d="M40 520 V560 M49.6 520 V532 M59.2 520 V532 M68.8 520 V532 M78.4 520 V532 M88 520 V542 M97.6 520 V532 M107.2 520 V532 M116.8 520 V532 M126.4 520 V532 M136 520 V542 M145.6 520 V532 M155.2 520 V532 M164.8 520 V532 M174.4 520 V532 M184 520 V542 M193.6 520 V532 M203.2 520 V532 M212.8 520 V532 M222.4 520 V532 M232 520 V542 M241.6 520 V532 M251.2 520 V532 M260.8 520 V532 M270.4 520 V532 M280 520 V542 M289.6 520 V532 M299.2 520 V532 M308.8 520 V532 M318.4 520 V532 M328 520 V560 M337.6 520 V532 M347.2 520 V532 M356.8 520 V532 M366.4 520 V532 M376 520 V542 M385.6 520 V532 M395.2 520 V532 M404.8 520 V532 M414.4 520 V532 M424 520 V542 M433.6 520 V532 M443.2 520 V532 M452.8 520 V532 M462.4 520 V532 M472 520 V560 M481.6 520 V532 M491.2 520 V532 M500.8 520 V532 M510.4 520 V532 M520 520 V542 M529.6 520 V532 M539.2 520 V532 M548.8 520 V532 M558.4 520 V532 M568 520 V542 M577.6 520 V532 M587.2 520 V532 M596.8 520 V532 M606.4 520 V532 M616 520 V542 M625.6 520 V532 M635.2 520 V532 M644.8 520 V532 M654.4 520 V532 M664 520 V542 M673.6 520 V532 M683.2 520 V532 M692.8 520 V532 M702.4 520 V532 M712 520 V542 M721.6 520 V532 M731.2 520 V532 M740.8 520 V532 M750.4 520 V532 M760 520 V560"/>
+<text x="24" y="640" class="t-m" style="font-size:20px">s.5</text>
+<text x="400" y="640" text-anchor="middle" class="t" style="font-size:18px">senior officer</text>
+<text x="616" y="640" text-anchor="middle" class="t" style="font-size:18px">court</text>
+<path d="M760 462 V660" stroke="#174D4F" stroke-width="6" stroke-linecap="round"/>
+<text x="776" y="742" text-anchor="end" class="t" style="font:800 84px var(--font-display);fill:#174D4F">75</text>
+<text x="776" y="778" text-anchor="end" class="t" style="font:700 24px var(--font-body)">working days at most</text>
+</g>
+</g>
+</svg>

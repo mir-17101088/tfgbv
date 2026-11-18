@@ -1,0 +1,14 @@
+# Survivor's originals and full account: private, never published
+/1.jpeg
+/2.jpeg
+/3.jpeg
+/4.jpeg
+/5.jpeg
+/6.jpeg
+/TFGBV Timeline.docx
+/01-source/
+/02-translation/
+# build and QA output
+/qa-out/
+__pycache__/
+*.pyc

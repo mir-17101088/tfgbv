@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 440" role="img" aria-labelledby="il09t" xmlns="http://www.w3.org/2000/svg">
+<title id="il09t">Illustration: a courtroom at dusk. Seen from behind, she faces the dock, where the accused is drawn only as a dashed outline.</title>
+<rect width="800" height="440" class="f-night"/>
+<!-- judge's bench -->
+<path class="f-night2" d="M220 120 L580 120 L580 220 L220 220 Z"/><path class="s s-th" d="M220 120 L580 120 L580 220 L220 220 Z M200 220 H600"/>
+<path class="s s-th o-50" d="M380 120 V70 H420 V120"/>
+<circle cx="400" cy="62" r="10" class="f-mint" opacity=".5"/>
+<!-- empty judge's chair -->
+<path class="s s-th o-50" d="M372 120 V92 Q400 82 428 92 V120"/>
+<!-- the dock, right -->
+<path class="f-night2" d="M560 260 L720 260 L720 400 L560 400 Z"/>
+<path class="s" d="M560 260 H720 V400 M560 260 V400 M580 260 V400 M600 260 V400 M620 260 V400 M640 260 V400 M660 260 V400 M680 260 V400 M700 260 V400"/>
+<!-- the accused: dashed outline only -->
+<g class="s s-dash s-mint">
+ <path d="M604 262 C604 222 616 204 640 198 C664 204 676 222 676 262"/>
+ <circle cx="640" cy="176" r="20"/>
+</g>
+<text x="640" y="432" text-anchor="middle" class="t-m" style="font-size:18px;fill:#8DD8C2">the accused</text>
+<!-- her, foreground left, from behind -->
+<path class="f-ink" d="M110 440 C108 380 130 340 170 326 C178 322 184 316 186 306 L210 306 C212 316 218 322 226 326 C266 340 288 380 286 440 Z"/>
+<path class="f-ink" d="M198 312 C172 312 160 290 160 266 C160 238 178 220 198 220 C220 220 236 238 236 266 C236 290 224 312 198 312 Z"/>
+<path class="s s-mint" opacity=".6" d="M226 232 C240 250 240 284 228 300 M232 330 C268 346 286 384 286 432"/>
+<!-- floor line -->
+<path class="s s-th o-25" d="M0 410 C200 400 600 400 800 410"/>
+</svg>

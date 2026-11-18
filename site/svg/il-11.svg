@@ -1,0 +1,46 @@
+<svg viewBox="110 30 640 790" role="img" aria-labelledby="il11t" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+<title id="il11t">Illustration: the closed front door of her home at night, seen from inside. For years it stays shut. At the end, two shadows of feet break the light under the door and someone knocks.</title>
+<!-- the hallway, one-point perspective -->
+<path fill="#081D1E" d="M-700 -500 H1500 V0 H-700 Z M0 0 L210 100 H650 L800 0 Z"/>
+<path fill="#0C2829" d="M-700 -523 L210 100 V740 L-700 1000 Z"/>
+<path fill="#0C2829" d="M1500 -467 L650 100 V740 L1500 1080 Z"/>
+<path fill="#103234" d="M210 100 H650 V740 H210 Z"/>
+<path fill="#071A1B" d="M-700 1000 L210 740 H650 L1500 1080 V1300 H-700 Z"/>
+<path class="s s-th o-25" d="M-700 -523 L210 100 H650 L1500 -467 M210 100 V740 M650 100 V740 M-700 1000 L210 740 H650 L1500 1080"/>
+<!-- floor tiles -->
+<path class="s s-th o-25" d="M300 740 L250 800 M390 740 L370 800 M480 740 L490 800 M570 740 L610 800 M150 757 H710 M70 780 H760"/>
+<!-- unlit bulb -->
+<path class="s s-th o-50" d="M430 0 V58"/><circle cx="430" cy="70" r="12" class="s s-th o-50"/>
+<!-- switchboard, left wall -->
+<path fill="#E6ECEA" opacity=".12" d="M98 386 L156 394 V468 L98 464 Z"/>
+<path class="s s-th o-50" d="M98 386 L156 394 V468 L98 464 Z M110 402 V420 M124 404 V422 M138 406 V424"/>
+<!-- the door -->
+<g class="il11-door">
+<path fill="#0E2C2E" d="M284 128 H576 V740 H284 Z"/>
+<path class="f-deep" d="M304 148 H556 V740 H304 Z"/>
+<path class="s s-th s-mint o-50" d="M284 740 V128 H576 V740 M304 740 V148 H556 V740"/>
+<path class="s s-th s-mint o-25" d="M326 172 H420 V356 H326 Z M440 172 H534 V356 H440 Z M326 382 H420 V560 H326 Z M440 382 H534 V560 H440 Z M326 586 H420 V716 H326 Z M440 586 H534 V716 H440 Z"/>
+<!-- hinges -->
+<path class="s s-mint o-50" d="M304 210 V236 M304 640 V666"/>
+<!-- peephole -->
+<circle cx="430" cy="300" r="7" fill="#061718"/><circle cx="430" cy="300" r="7" class="s s-th s-mint"/>
+<!-- deadbolt, lever, chain -->
+<rect x="520" y="404" width="20" height="14" rx="3" class="f-mint" opacity=".6"/>
+<path class="s s-mint" d="M530 452 H504"/><circle cx="530" cy="452" r="6" class="f-mint" opacity=".8"/>
+<path class="s s-th s-dash s-mint" d="M548 372 C556 394 570 396 576 378"/>
+</g>
+<!-- the light under the door -->
+<path class="il11-spill" fill="#B9E0DA" opacity=".08" d="M304 740 H556 L606 800 H254 Z"/>
+<rect class="il11-gap" x="304" y="735" width="252" height="5" fill="#B9E0DA" opacity=".7"/>
+<!-- her sandals by the door -->
+<path fill="#246E72" d="M232 772 C230 758 246 754 252 764 L256 784 C252 792 236 790 232 772 Z M262 770 C262 756 278 754 282 766 L284 786 C280 794 264 790 262 770 Z"/>
+<!-- the knock: two shadows of feet outside, impact at the door -->
+<g class="il11-feet" fill="#061718">
+<rect x="376" y="733" width="36" height="8"/><rect x="448" y="733" width="36" height="8"/>
+<path d="M376 740 H412 L420 800 H366 Z M448 740 H484 L494 800 H440 Z" opacity=".85"/>
+</g>
+<g class="il11-knock s s-white s-bold">
+<path d="M478 316 L500 302 M482 336 L508 336 M478 356 L500 370"/>
+<path d="M382 316 L360 302 M378 336 L352 336 M382 356 L360 370"/>
+</g>
+</svg>
