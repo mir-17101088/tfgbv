@@ -1,4 +1,5 @@
 // Ch.11 Interactive Legal Roadmap: clean view filtering + expand/collapse legal notes.
+import { reduced } from './scroll.js';
 
 const BANNERS = {
   all: null,
@@ -17,6 +18,8 @@ export function initRoadmap() {
   if (!root) return;
 
   const chart = root.querySelector('.flow-chart');
+  const controls = root.querySelector('.map-controls');
+  const prep = root.querySelector('.prep-strip');
   const buttons = root.querySelectorAll('.mode-btn[data-mode]');
   const banner = root.querySelector('.mode-banner');
   const bannerText = root.querySelector('.mode-banner__text');
@@ -27,7 +30,25 @@ export function initRoadmap() {
 
   if (!chart) return;
 
-  function setMode(mode) {
+  function scrollToRoadmapTop() {
+    const railH = 30;
+    let targetY;
+    // Measure non-sticky .prep-strip bottom so we get the true un-stuck top of .map-controls
+    if (prep) {
+      const mb = parseFloat(window.getComputedStyle(prep).marginBottom) || 0;
+      targetY = prep.getBoundingClientRect().bottom + window.pageYOffset + mb - railH;
+    } else if (controls) {
+      targetY = controls.getBoundingClientRect().top + window.pageYOffset - railH;
+    } else {
+      targetY = root.getBoundingClientRect().top + window.pageYOffset - railH;
+    }
+    targetY = Math.max(0, Math.round(targetY));
+    if (window.pageYOffset > targetY + 4) {
+      window.scrollTo({ top: targetY, behavior: reduced ? 'auto' : 'smooth' });
+    }
+  }
+
+  function setMode(mode, shouldScroll = false) {
     chart.setAttribute('data-mode', mode);
     for (let i = 0; i < buttons.length; i++) {
       buttons[i].setAttribute('aria-pressed', String(buttons[i].getAttribute('data-mode') === mode));
@@ -49,16 +70,19 @@ export function initRoadmap() {
     } else if (mode === 'clocks') {
       root.querySelectorAll('[data-open-on~="clocks"]').forEach((d) => { d.open = true; });
     }
+    if (shouldScroll) {
+      window.requestAnimationFrame(scrollToRoadmapTop);
+    }
   }
 
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', () => {
-      setMode(buttons[i].getAttribute('data-mode'));
+      setMode(buttons[i].getAttribute('data-mode'), true);
     });
   }
 
   if (resetBtn) {
-    resetBtn.addEventListener('click', () => setMode('all'));
+    resetBtn.addEventListener('click', () => setMode('all', true));
   }
 
   if (expandBtn && details.length) {
