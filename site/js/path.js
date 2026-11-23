@@ -106,6 +106,15 @@ export function initPath() {
   let W = 0, H = 0, live = false, desk = false, minL = 0, anchor = 0, pw = 0, ph = 0;
   let P = BEATS.map((_, i) => (i + 1) / (BEATS.length + 1));
   let lastP = 1, lastVi = -1;
+  let lawW = 110, herW = 60;
+  let lastPillStr = '', lastPillW = 64, lastNowStr = '', lastNowW = 120;
+  let lastPassed = null, lastPillLate = null, lastNowLate = null, lastDlPassed = null;
+  const nowWidthCache = new Map();
+  const pillWidthCache = new Map();
+
+  function measureTextW(el, fallback) {
+    return el.getComputedTextLength ? (el.getComputedTextLength() || fallback) : fallback;
+  }
 
   function layout() {
     live = html.classList.contains('js');
@@ -127,6 +136,13 @@ export function initPath() {
       panel.style.width = panel.style.height = panel.style.transform = '';
       pSvg.setAttribute('viewBox', '0 0 640 400');
     }
+    // Pre-measure static SVG text widths once on layout/font load instead of every scroll frame
+    lawW = measureTextW(g.lawText, 110);
+    herW = measureTextW(g.herText, 60);
+    nowWidthCache.clear();
+    pillWidthCache.clear();
+    lastPillStr = '';
+    lastNowStr = '';
     // scroll progress at which each card becomes the active one (its top crosses 80% of the viewport)
     if (live) {
       const vh = window.innerHeight;
@@ -183,10 +199,9 @@ export function initPath() {
     g.barrier.setAttribute('d', 'M0 ' + f1(yL - hl - 6) + 'V' + f1(yL + hl + 6));
     g.barrierBg.setAttribute('d', 'M0 ' + f1(yL - hl - 6) + 'V' + f1(yL + hl + 6));
     g.lawEndSign.setAttribute('transform', 'translate(0 ' + f1(yL - hl - 6) + ')');
-    const lw = g.lawText.getComputedTextLength ? g.lawText.getComputedTextLength() : 110;
-    g.lawText.setAttribute('x', f1(clamp(a + 10, 8, b - lw - 10)));
+    g.lawText.setAttribute('x', f1(clamp(a + 10, 8, b - lawW - 10)));
     g.lawText.setAttribute('y', f1(yL + 4));
-    g.lawText.style.opacity = b - a > lw + 16 ? 1 : 0;
+    g.lawText.style.opacity = b - a > lawW + 16 ? 1 : 0;
 
     // her road: revealed only as far as she has walked; past the limit it turns red
     const step = Math.max(0.25, 5 / k);
@@ -216,11 +231,10 @@ export function initPath() {
     g.herRoad.setAttribute('d', strip(s0, Math.min(s1, DEADLINE)));
     g.herLate.setAttribute('d', strip(Math.max(s0, DEADLINE), s1));
     g.herEdge.setAttribute('d', edge(s0, s1) + (s0 <= 0 ? 'M' + f1(sx(0)) + ' ' + f1(yR + wob(0) - hr) + 'V' + f1(yR + wob(0) + hr) : ''));
-    const hw = g.herText.getComputedTextLength ? g.herText.getComputedTextLength() : 60;
-    const hx = clamp(sx(0) + 10, 8, sx(day) - hw - 14);
+    const hx = clamp(sx(0) + 10, 8, sx(day) - herW - 14);
     g.herText.setAttribute('x', f1(hx));
     g.herText.setAttribute('y', f1(yR + wob(hx / k + L) - hr - 8));
-    g.herText.style.opacity = sx(day) - Math.max(sx(0), 0) > hw + 24 ? 1 : 0;
+    g.herText.style.opacity = sx(day) - Math.max(sx(0), 0) > herW + 24 ? 1 : 0;
     g.herMid.setAttribute('d', (function () {
       let t = '';
       for (let d = s0; d < s1; d = Math.min(s1, d + step)) t += (t ? 'L' : 'M') + f1(sx(d)) + ' ' + f1(yR + wob(d));
@@ -273,11 +287,15 @@ export function initPath() {
     g.dlLine.setAttribute('d', 'M' + f1(dx) + ' 0V' + f1(yT + 16));
     g.dlText.setAttribute('x', f1(dx - 6));
     g.dlText.setAttribute('y', f1(yL + hl + 16));
-    g.dl.setAttribute('class', 'pathviz__deadline' + (passed ? ' is-passed' : ''));
+    if (passed !== lastDlPassed) {
+      lastDlPassed = passed;
+      g.dl.setAttribute('class', 'pathviz__deadline' + (passed ? ' is-passed' : ''));
+    }
 
     // her, walking: legs swing between beats and settle when she stops
     let near = 1e9;
-    BEATS.concat([CASE]).forEach((bd) => { near = Math.min(near, Math.abs(day - bd)); });
+    for (let i = 0; i < BEATS.length; i++) near = Math.min(near, Math.abs(day - BEATS[i]));
+    near = Math.min(near, Math.abs(day - CASE));
     const swing = Math.sin(day * Math.PI / 1.6) * 26 * Math.min(1, near * 1.2);
     const fy = yR + wob(day) - hr + 2;
     g.her.setAttribute('transform', 'translate(' + f1(hx2) + ' ' + f1(fy) + ') scale(' + (fh / 100).toFixed(3) + ')');
@@ -291,28 +309,58 @@ export function initPath() {
     g.leader.setAttribute('d', 'M' + f1(bx) + ' 0V' + f1(atBeat ? fy - fh - 8 : yR + wob(bd) - hr - 2));
     g.leader.style.opacity = live ? 1 : 0;
 
-    // readouts
+    // readouts (cached widths avoid per-frame forced layout reflows)
     const ev = EVENTS[cur];
     const approx = ev[0] === DEADLINE && Math.round(day) === DEADLINE;
-    g.pillText.textContent = fmtDay(day, approx);
-    const pwid = g.pillText.getComputedTextLength ? g.pillText.getComputedTextLength() + 16 : 64;
-    g.pillBg.setAttribute('width', f1(pwid)); g.pillBg.setAttribute('x', f1(-pwid / 2));
-    g.pill.setAttribute('transform', 'translate(' + f1(clamp(hx2, pwid / 2 + 2, W - pwid / 2 - 2)) + ' ' + f1(yT + 24) + ')');
-    g.pill.setAttribute('class', 'road-pill' + (day > DEADLINE + 0.5 ? ' is-late' : ''));
-    g.now.textContent = ev[1];
+    const pillStr = fmtDay(day, approx);
+    if (pillStr !== lastPillStr) {
+      lastPillStr = pillStr;
+      g.pillText.textContent = pillStr;
+      let pw0 = pillWidthCache.get(pillStr);
+      if (pw0 == null) {
+        pw0 = measureTextW(g.pillText, 48) + 16;
+        pillWidthCache.set(pillStr, pw0);
+      }
+      lastPillW = pw0;
+      g.pillBg.setAttribute('width', f1(lastPillW));
+      g.pillBg.setAttribute('x', f1(-lastPillW / 2));
+    }
+    g.pill.setAttribute('transform', 'translate(' + f1(clamp(hx2, lastPillW / 2 + 2, W - lastPillW / 2 - 2)) + ' ' + f1(yT + 24) + ')');
+    const pillLate = day > DEADLINE + 0.5;
+    if (pillLate !== lastPillLate) {
+      lastPillLate = pillLate;
+      g.pill.setAttribute('class', 'road-pill' + (pillLate ? ' is-late' : ''));
+    }
+    const nowStr = ev[1];
+    if (nowStr !== lastNowStr) {
+      lastNowStr = nowStr;
+      g.now.textContent = nowStr;
+      let nw0 = nowWidthCache.get(nowStr);
+      if (nw0 == null) {
+        nw0 = measureTextW(g.now, 120);
+        nowWidthCache.set(nowStr, nw0);
+      }
+      lastNowW = nw0;
+    }
     const ex = sx(ev[0]);
     const right = ex > W * 0.62;
     g.now.setAttribute('text-anchor', right ? 'end' : 'start');
-    const nw = g.now.getComputedTextLength ? g.now.getComputedTextLength() : 120;
-    g.now.setAttribute('x', f1(right ? clamp(ex + 6, nw + 4, W - 4) : clamp(ex - 6, 4, W - nw - 4)));
+    g.now.setAttribute('x', f1(right ? clamp(ex + 6, lastNowW + 4, W - 4) : clamp(ex - 6, 4, W - lastNowW - 4)));
     g.now.setAttribute('y', f1(yR + wob(day) + hr + 18));
-    g.now.setAttribute('class', 'pathviz__now' + (ev[0] >= DEADLINE ? ' is-late' : ''));
+    const nowLate = ev[0] >= DEADLINE;
+    if (nowLate !== lastNowLate) {
+      lastNowLate = nowLate;
+      g.now.setAttribute('class', 'pathviz__now' + (nowLate ? ' is-late' : ''));
+    }
 
     // stage: panel follows her, red limit line drops through the whole screen once passed
-    root.classList.toggle('is-late', passed);
+    if (passed !== lastPassed) {
+      lastPassed = passed;
+      root.classList.toggle('is-late', passed);
+    }
     if (live && panel) {
       const left = clamp(bx - pw / 2, minL, W - pw - 12);
-      panel.style.transform = 'translateX(' + Math.round(left) + 'px)';
+      panel.style.transform = 'translate3d(' + Math.round(left) + 'px,0,0)';
       panel.style.setProperty('--tail', Math.round(clamp(bx - left, 22, pw - 22)) + 'px');
       limitEl.style.left = Math.round(dx) + 'px';
       overEl.style.left = Math.round(dx) + 'px';
@@ -334,7 +382,7 @@ export function initPath() {
   });
   let rz = 0;
   const again = () => { cancelAnimationFrame(rz); rz = requestAnimationFrame(() => { layout(); render(lastP); }); };
-  window.addEventListener('resize', again);
+  window.addEventListener('resize', again, { passive: true });
   window.addEventListener('load', again);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(again);
 }

@@ -1,4 +1,4 @@
-// Ch.1 messages (phone + "I don't respond") and Ch.2 checklist.
+// Ch.1 messages (phone + "I don't respond" + unblur first screenshot) and Ch.2 checklist.
 import { scene, activeCard } from './scroll.js';
 
 function activeStep(p, n) {
@@ -6,6 +6,7 @@ function activeStep(p, n) {
 }
 
 export function initMessages() {
+  const phone = document.querySelector('[data-scene="messages"] .phone');
   const imgs = document.querySelectorAll('.phone__img');
   const steps = document.querySelectorAll('[data-scene="messages"] .step');
   let last = -1;
@@ -14,16 +15,19 @@ export function initMessages() {
     if (i === last) return;
     last = i;
     const shot = steps[i].getAttribute('data-shot');
-    imgs.forEach((im) => im.classList.toggle('is-on', im.getAttribute('data-shot') === shot));
+    for (let j = 0; j < imgs.length; j++) {
+      imgs[j].classList.toggle('is-on', imgs[j].getAttribute('data-shot') === shot);
+    }
   });
 
   document.querySelectorAll('.reveal').forEach((btn) => {
     btn.addEventListener('click', () => {
       const t = document.getElementById(btn.getAttribute('aria-controls'));
       const open = btn.getAttribute('aria-expanded') !== 'true';
-      t.hidden = !open;
+      if (t) t.hidden = !open;
       btn.setAttribute('aria-expanded', String(open));
       btn.textContent = open ? 'Hide it again' : 'Show what he wrote';
+      if (phone) phone.classList.toggle('is-revealed', open);
     });
   });
 }
@@ -48,8 +52,8 @@ export function initChecklist() {
     const done = p >= 0.999 ? checks.length : Math.min(checks.length, activeCard(el) + 1);
     if (done === last) return;
     last = done;
-    checks.forEach((c, i) => c.classList.toggle('is-done', i < done));
-    bits.forEach((b) => b.classList.toggle('is-on', +b.getAttribute('data-k') < done));
+    for (let i = 0; i < checks.length; i++) checks[i].classList.toggle('is-done', i < done);
+    for (let i = 0; i < bits.length; i++) bits[i].classList.toggle('is-on', +bits[i].getAttribute('data-k') < done);
     if (date) date.textContent = DATES[Math.max(0, done - 1)];
     if (friends) friends.classList.toggle('is-on', done >= 1 && done <= 2);
     const a = TILT[done] * Math.PI / 180;

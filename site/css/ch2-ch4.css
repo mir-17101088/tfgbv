@@ -28,8 +28,8 @@ html:not(.js) .step.check{margin-bottom:var(--space-3)}
 @media (max-width:420px){.step.check{padding-left:3rem}.step.check b{font-size:1rem}}
 
 /* the art: items drop onto the pans; the beam and pans are moved from JS (final state is the CSS default) */
-.il03-beam{transform-origin:380px 130px;transform:rotate(-16deg);transition:transform .7s cubic-bezier(.3,1.25,.5,1)}
-.il03-pan{transition:transform .7s cubic-bezier(.3,1.25,.5,1)}
+.il03-beam{transform-origin:380px 130px;transform:rotate(-16deg);transition:transform .7s cubic-bezier(.3,1.25,.5,1);will-change:transform}
+.il03-pan{transition:transform .7s cubic-bezier(.3,1.25,.5,1);will-change:transform}
 .il03-pan--l{transform:translate(9.7px,68.9px)}
 .il03-pan--r{transform:translate(-9.7px,-68.9px)}
 .js #IL-03 .c{opacity:0;transform:translateY(-70px);transition:opacity .3s var(--ease),transform .45s cubic-bezier(.4,1.5,.6,1)}

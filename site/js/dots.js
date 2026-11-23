@@ -1,6 +1,6 @@
 // Ch.10: she is one of many. A crowd of women seen from behind (IL-12).
 // Card 0: close on her (red phone). Card 1: the camera pulls back to the whole crowd
-// (42,642 complaints to PCSW; the crowd is not drawn to scale). Card 2: the nearest twenty;
+// (87,727 complaints to PCSW over five years, reported Mar 2026; the crowd is not drawn to scale). Card 2: the nearest twenty;
 // ~17 phones go dark, ~3 stay lit (ActionAid 2022: >85% stayed silent, 14.9% complained).
 import { scene, activeCard, reduced } from './scroll.js';
 
@@ -69,5 +69,5 @@ export function initDots() {
     window.__crowd = s;
     frame();
   });
-  window.addEventListener('resize', frame);
+  window.addEventListener('resize', frame, { passive: true });
 }

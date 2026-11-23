@@ -24,10 +24,30 @@ function todayCounter() {
   el.textContent = fmtNum(dayOf(iso));
 }
 
+function initSources() {
+  const btn = document.querySelector('.sources-btn');
+  const panel = document.getElementById('sources');
+  if (!btn || !panel) return;
+  const label = btn.querySelector('.sources-btn__label');
+  const icon = btn.querySelector('.sources-btn__icon');
+  const count = panel.querySelectorAll('ol > li').length;
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') !== 'true';
+    btn.setAttribute('aria-expanded', String(open));
+    panel.hidden = !open;
+    if (label) {
+      label.innerHTML = (open ? 'Hide sources ' : 'View sources ') +
+        '<span class="sources-btn__count">(' + count + ')</span>';
+    }
+    if (icon) icon.textContent = open ? '\u2212' : '+';
+  });
+}
+
 // Reduced motion / Save-Data: keep the static (no-JS) layout, but still draw charts in their final state.
 document.documentElement.classList.add(reduced ? 'reduced' : 'js');
 applyConfig();
 todayCounter();
+initSources();
 initRail();
 initIllustrations();
 initMessages();
@@ -36,4 +56,3 @@ initPath();
 initSilence();
 initDots();
 initRoadmap();
-
