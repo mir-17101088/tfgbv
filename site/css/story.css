@@ -218,6 +218,16 @@ html:not(.js) .sources-panel[hidden]{display:block}
 #sources ol{margin:0;padding-left:1.25rem;font-size:.8125rem;line-height:1.55}
 #sources li{margin-bottom:var(--space-3);word-break:break-word}
 #sources li:last-child{margin-bottom:0}
+.companion-cta{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);margin-top:var(--space-6);padding:var(--space-5);border:2px solid var(--ink-900);border-radius:var(--radius-lg);background:linear-gradient(135deg,var(--night) 0%,var(--tgi-deep-teal) 100%);color:#fff;text-decoration:none;box-shadow:5px 5px 0 rgba(16,32,31,.16);transition:transform .22s var(--ease),box-shadow .22s var(--ease),border-color .22s var(--ease)}
+.companion-cta:hover,.companion-cta:focus-visible{color:#fff;border-color:var(--tgi-mint);transform:translateY(-2px);box-shadow:7px 7px 0 rgba(23,77,79,.24)}
+.companion-cta__body{display:flex;flex-direction:column;gap:6px;min-width:0}
+.companion-cta__kicker{font:700 .7rem/1.2 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--tgi-mint)}
+.companion-cta__title{font:800 clamp(1.0625rem,2.6vw,1.25rem)/1.25 var(--font-display);letter-spacing:-.015em;color:#fff}
+.companion-cta__desc{font:400 .9rem/1.5 var(--font-body);color:rgba(255,255,255,.82)}
+.companion-cta__go{flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(141,216,194,.5);background:rgba(141,216,194,.12);color:var(--tgi-mint);display:inline-flex;align-items:center;justify-content:center;transition:transform .22s var(--ease),background .22s var(--ease),color .22s var(--ease),border-color .22s var(--ease)}
+.companion-cta__go svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.25;stroke-linecap:round;stroke-linejoin:round}
+.companion-cta:hover .companion-cta__go,.companion-cta:focus-visible .companion-cta__go{background:var(--tgi-mint);border-color:var(--tgi-mint);color:var(--night);transform:translateX(3px)}
+@media (max-width:520px){.companion-cta{align-items:flex-start;padding:var(--space-4)}.companion-cta__go{flex:0 0 38px;width:38px;height:38px;margin-top:2px}}
 
 /* ===== footer ===== */
 
