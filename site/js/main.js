@@ -6,6 +6,7 @@ import { initMessages, initChecklist } from './chapters.js';
 import { initPath } from './path.js';
 import { initSilence } from './silence.js';
 import { initDots } from './dots.js';
+import { initRoadmap } from './roadmap.js';
 
 export function applyConfig(root = document) {
   const els = root.querySelectorAll('[data-cfg]');
@@ -34,4 +35,5 @@ initChecklist();
 initPath();
 initSilence();
 initDots();
+initRoadmap();
 
