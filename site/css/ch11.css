@@ -139,6 +139,14 @@
   margin-bottom: 4px;
 }
 
+.prep-card--hotline .prep-card__body b {
+  color: #fff;
+}
+
+.prep-card--hotline .prep-card__body p {
+  color: rgba(255, 255, 255, .86);
+}
+
 .prep-card__body p {
   margin: 0;
 }
@@ -429,10 +437,21 @@ html:not(.js) .map-controls {
   background: linear-gradient(90deg, var(--phase-accent, var(--tgi-teal)), rgba(16, 32, 31, .08));
 }
 
-.flow-phase--1 { --phase-accent: var(--tgi-teal); }
-.flow-phase--2 { --phase-accent: var(--tgi-ocean); }
-.flow-phase--3 { --phase-accent: var(--tgi-deep-teal); }
-.flow-phase--4 { --phase-accent: var(--tgi-navy); }
+.flow-phase--1 {
+  --phase-accent: var(--tgi-teal);
+}
+
+.flow-phase--2 {
+  --phase-accent: var(--tgi-ocean);
+}
+
+.flow-phase--3 {
+  --phase-accent: var(--tgi-deep-teal);
+}
+
+.flow-phase--4 {
+  --phase-accent: var(--tgi-navy);
+}
 
 /* ===== Stage Row Layout (Main Node + Optional Side Branch) ===== */
 @media (min-width: 860px) {
@@ -494,6 +513,7 @@ html:not(.js) .map-controls {
     justify-content: center;
     padding-left: 0;
   }
+
   .flow-arrow--center {
     justify-content: center;
     padding-left: 0;
@@ -545,11 +565,13 @@ html:not(.js) .map-controls {
     height: 100%;
     min-height: 44px;
   }
+
   .branch-link__h {
     display: block;
     width: 44px;
     height: 32px;
   }
+
   .branch-link__v {
     display: none;
   }
@@ -938,9 +960,18 @@ html:not(.js) .map-controls {
   border-right: 0;
 }
 
-.law-ruler__seg--base { background: var(--tgi-deep-teal); }
-.law-ruler__seg--mid  { background: var(--tgi-ocean); }
-.law-ruler__seg--ext  { background: var(--tgi-mint); color: var(--ink-900); }
+.law-ruler__seg--base {
+  background: var(--tgi-deep-teal);
+}
+
+.law-ruler__seg--mid {
+  background: var(--tgi-ocean);
+}
+
+.law-ruler__seg--ext {
+  background: var(--tgi-mint);
+  color: var(--ink-900);
+}
 
 .law-ruler__legend {
   display: flex;
@@ -1150,7 +1181,7 @@ html:not(.js) .map-controls {
   display: none;
 }
 
-.flow-chart[data-mode="clocks"] .flow-row[data-path~="clocks"] + .flow-arrow + .flow-row[data-path~="clocks"] {
+.flow-chart[data-mode="clocks"] .flow-row[data-path~="clocks"]+.flow-arrow+.flow-row[data-path~="clocks"] {
   margin-top: var(--space-4);
 }
 
@@ -1276,13 +1307,16 @@ html:not(.js) .map-controls {
   .stage-card {
     padding: var(--space-4);
   }
+
   .map-controls {
     position: static;
     padding: 12px 0;
   }
+
   .mode-btn {
     padding: 9px 12px;
   }
+
   .law-ruler__seg {
     font-size: .6875rem;
     padding: 0 3px;
