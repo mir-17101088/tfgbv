@@ -1,6 +1,6 @@
 // "N days since the first message" rail. Sections carry data-day (and data-day-end).
 // Uses cached geometry from scroll.js so scrolling triggers zero layout reads.
-import { onScroll, onMeasure, progressOf } from './scroll.js';
+import { onScroll, onMeasure, progressOf, reduced } from './scroll.js';
 import { fmtNum } from './config.js';
 
 export const TOTAL = 1873;      // next hearing, 7 Dec 2026
@@ -8,6 +8,12 @@ export const DEADLINE = 150;    // ~20 Mar 2022: 75 working days after the case 
 
 export function initRail() {
   const rail = document.querySelector('.rail');
+  const toTop = document.querySelector('.to-top');
+  if (toTop) {
+    toTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+    });
+  }
   if (!rail) return;
   const n = rail.querySelector('.rail__n');
   const mark = rail.querySelector('.rail__mark');
@@ -57,6 +63,7 @@ export function initRail() {
     if (isOn !== lastOn) {
       lastOn = isOn;
       rail.classList.toggle('is-on', isOn);
+      if (toTop) toTop.classList.toggle('is-on', isOn);
     }
     if (day !== last) {
       last = day;
