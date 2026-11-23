@@ -58,6 +58,7 @@
   <link rel="stylesheet" href="css/ch2-ch4.css">
   <link rel="stylesheet" href="css/ch6.css">
   <link rel="stylesheet" href="css/ch7-ch10.css">
+  <link rel="stylesheet" href="css/ch11.css">
   <script type="module" src="js/main.js"></script>
 </head>
 
@@ -2075,19 +2076,917 @@
     </section>
 
     <!-- ============ 11 IF THIS HAPPENS TO YOU ============ -->
-    <section id="ch11" class="chapter paper">
-      <div class="prose">
-        <h2 class="ch-title">If this happens to you</h2>
-        <ol class="guide">
-          <li><b>Keep the evidence.</b> Screenshot every message with the date, time and the account&rsquo;s profile
-            link. Don&rsquo;t delete the chat; you can block after you have saved it.</li>
-          <li data-unverified><b>A GD is a record, not a case.</b> For a cognizable offence, you can ask the police to
-            record a case (FIR).</li>
-          <li data-unverified><b>If the police station refuses,</b> you can go to a senior police officer (circle ASP or
-            Superintendent of Police) or file a complaint before a magistrate.</li>
-          <li data-unverified><b>Police Cyber Support for Women</b> takes complaints through its Facebook page and its
-            hotline, 01320000888 (number published at launch in 2020), or call 999.</li>
-        </ol>
+    <section id="ch11" class="chapter paper" aria-labelledby="ch11-title">
+      <div class="roadguide">
+        <header class="roadguide__head">
+          <p class="roadguide__kicker">The Legal Road Today &middot; Act No. 81 of 2026</p>
+          <h2 class="ch-title" id="ch11-title">If this happens to you</h2>
+          <p class="roadguide__lead"><span data-cfg="survivor">Nadia</span>&rsquo;s 2021 case was filed under the
+            <strong>Pornography Control Act, 2012</strong>. Today, online sexual harassment, blackmail, sextortion,
+            non-consensual intimate images and AI-edited abuse are primarily prosecuted under <strong>Section 25 of the
+              Cyber Security Act, 2026</strong> (<span class="roadguide__bn" lang="bn">সাইবার সুরক্ষা আইন,
+              ২০২৬</span>) &mdash; alongside the 2012 Act where pornography applies. Here is how the legal process
+            actually works, step by step.</p>
+        </header>
+
+        <!-- Phase 0: Immediate prep & helplines -->
+        <div class="prep-strip" aria-label="Before you file">
+          <div class="prep-card">
+            <span class="prep-card__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" />
+                <path d="M9 7h6M9 11h6M9 15h4" />
+              </svg>
+            </span>
+            <div class="prep-card__body">
+              <b>Save evidence before blocking</b>
+              <p>Screenshot every message with dates, times, profile links/URLs, phone numbers and payment IDs. Do not
+                delete the chat; block only <em>after</em> saving everything.</p>
+            </div>
+          </div>
+
+          <div class="prep-card">
+            <span class="prep-card__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="9" y1="15" x2="15" y2="15" />
+              </svg>
+            </span>
+            <div class="prep-card__body">
+              <b>A GD is a log, not a case</b>
+              <p>A General Diary records an incident but does not launch a criminal trial. For a Section 25 offence, ask
+                the police station to register an <strong>FIR</strong>.</p>
+            </div>
+          </div>
+
+          <div class="prep-card prep-card--hotline">
+            <span class="prep-card__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </span>
+            <div class="prep-card__body">
+              <b>Confidential helplines</b>
+              <p>Police Cyber Support for Women (female officers) &amp; national emergency lines:</p>
+              <div class="hotline-pills">
+                <a class="hotline-pill" href="tel:01320000888">PCSW 01320000888</a>
+                <a class="hotline-pill" href="tel:999">999 Emergency</a>
+                <a class="hotline-pill" href="tel:109">109 VAW Helpline</a>
+                <a class="hotline-pill" href="mailto:cybersupport.women@police.gov.bd">PCSW Email</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Mode Ribbon -->
+        <div class="map-controls" role="region" aria-label="Explore the legal flowchart">
+          <div class="map-controls__group">
+            <span class="map-controls__label">Trace path:</span>
+            <button class="mode-btn" type="button" data-mode="all" aria-pressed="true">
+              <span class="mode-btn__dot" aria-hidden="true"></span>Full 9-step map
+            </button>
+            <button class="mode-btn mode-btn--alarm" type="button" data-mode="refusal" aria-pressed="false">
+              <span class="mode-btn__dot" aria-hidden="true"></span>If police refuse
+            </button>
+            <button class="mode-btn" type="button" data-mode="clocks" aria-pressed="false">
+              <span class="mode-btn__dot" aria-hidden="true"></span>Legal deadlines
+            </button>
+          </div>
+          <div class="map-controls__actions">
+            <button class="expand-all-btn" type="button" aria-expanded="false">Expand all legal notes</button>
+          </div>
+        </div>
+
+        <p class="mode-banner" role="status" aria-live="polite" hidden></p>
+
+        <!-- Quick Phase Jump Rail -->
+        <nav class="phase-nav" aria-label="Jump to phase">
+          <a class="phase-nav__item" href="#phase-1"><span class="phase-nav__sw"
+              style="background:var(--tgi-teal)"></span>I. Entry &amp; Filing (1&ndash;3)</a>
+          <a class="phase-nav__item" href="#phase-2"><span class="phase-nav__sw"
+              style="background:var(--tgi-ocean)"></span>II. Judicial Check &amp; Investigation (4&ndash;6)</a>
+          <a class="phase-nav__item" href="#phase-3"><span class="phase-nav__sw"
+              style="background:var(--tgi-deep-teal)"></span>III. Trial &amp; Verdict (7&ndash;8)</a>
+          <a class="phase-nav__item" href="#phase-4"><span class="phase-nav__sw"
+              style="background:var(--tgi-navy)"></span>IV. Appeal (9)</a>
+        </nav>
+
+        <!-- ============ 9-STAGE INTERACTIVE FLOWCHART ============ -->
+        <div class="flow-chart" data-mode="all">
+
+          <!-- ========== PHASE I: ENTRY & FILING ========== -->
+          <div class="flow-phase flow-phase--1" id="phase-1">
+            <div class="flow-phase__head">
+              <span class="flow-phase__badge">Phase I</span>
+              <span class="flow-phase__title">Entry &amp; Case Filing</span>
+              <span class="flow-phase__line" aria-hidden="true"></span>
+            </div>
+
+            <!-- STAGE 1 -->
+            <div class="flow-row" data-path="all refusal" id="stage-1">
+              <article class="stage-card">
+                <div class="stage-card__top">
+                  <div class="stage-card__id">
+                    <span class="stage-num">1</span>
+                    <div>
+                      <h3 class="stage-title">Reporting &amp; Support Channels</h3>
+                      <span class="stage-sub">Where to start &mdash; and which offices can actually open a case</span>
+                    </div>
+                  </div>
+                  <div class="chip-row">
+                    <span class="law-chip">Sec 40(1) Standing</span>
+                  </div>
+                </div>
+
+                <div class="channel-grid">
+                  <div class="channel-tile channel-tile--primary">
+                    <div class="channel-tile__head">
+                      <span class="channel-tile__ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />
+                        </svg>
+                      </span>
+                      <div>
+                        <div class="channel-tile__name">Police Station</div>
+                        <div class="channel-tile__role">Formal FIR / GD</div>
+                      </div>
+                    </div>
+                    <p class="channel-tile__desc">Primary legal entry point. Ask to register an <strong>FIR</strong> at
+                      your local station (or log a GD first if facts are still being verified).</p>
+                  </div>
+
+                  <div class="channel-tile">
+                    <div class="channel-tile__head">
+                      <span class="channel-tile__ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                          <path
+                            d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                        </svg>
+                      </span>
+                      <div>
+                        <div class="channel-tile__name">PCSW</div>
+                        <div class="channel-tile__role">Support &amp; Coordination</div>
+                      </div>
+                    </div>
+                    <p class="channel-tile__desc">Female officers advise, help trace accounts and coordinate with local
+                      police via Facebook (PCSW.PHQ), email or 01320000888.</p>
+                  </div>
+
+                  <div class="channel-tile">
+                    <div class="channel-tile__head">
+                      <span class="channel-tile__ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                      </span>
+                      <div>
+                        <div class="channel-tile__name">CSO &amp; Legal Aid</div>
+                        <div class="channel-tile__role">Referral &amp; Lawyers</div>
+                      </div>
+                    </div>
+                    <p class="channel-tile__desc">Rights groups and legal aid clinics help draft complaints, prepare
+                      affidavits and connect you with psychosocial care.</p>
+                  </div>
+
+                  <div class="channel-tile">
+                    <div class="channel-tile__head">
+                      <span class="channel-tile__ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="2" y="3" width="20" height="14" rx="2" />
+                          <line x1="8" y1="21" x2="16" y2="21" />
+                          <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                      </span>
+                      <div>
+                        <div class="channel-tile__name">Tech Platform</div>
+                        <div class="channel-tile__role">Content Takedown</div>
+                      </div>
+                    </div>
+                    <p class="channel-tile__desc">Use in-app reporting to remove abusive posts or fake profiles &mdash;
+                      always <strong>after</strong> capturing screenshots and profile URLs.</p>
+                  </div>
+
+                  <div class="channel-tile channel-tile--escalate">
+                    <div class="channel-tile__head">
+                      <span class="channel-tile__ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 3L2 8h20L12 3zM4 8v10M9 8v10M15 8v10M20 8v10M2 18h20M2 21h20" />
+                        </svg>
+                      </span>
+                      <div>
+                        <div class="channel-tile__name">Cyber Tribunal</div>
+                        <div class="channel-tile__role">Escalation Only &middot; Sec 40(2)</div>
+                      </div>
+                    </div>
+                    <p class="channel-tile__desc">Not a first-step walk-in: you may petition the Tribunal directly
+                      <strong>only with an affidavit</strong> confirming a police station refused your complaint.</p>
+                  </div>
+                </div>
+
+                <details class="stage-detail">
+                  <summary>Statute &amp; survivor notes (Sec 40(1))</summary>
+                  <div class="stage-detail__body">
+                    <p><strong>Who may file:</strong> Under <strong>Section 40(1)</strong> of the Cyber Security Act,
+                      2026, only the aggrieved person, someone authorised by them in writing, or a law-enforcement
+                      officer can file a case &mdash; preventing unrelated third-party filings.</p>
+                    <p><span class="reality-flag">Practical reality:</span> PCSW cannot register an FIR itself; as in
+                      <span data-cfg="survivor">Nadia</span>&rsquo;s case, you must still file at a local police
+                      station (or escalate to the Tribunal if refused).</p>
+                  </div>
+                </details>
+              </article>
+            </div>
+
+            <div class="flow-arrow flow-arrow--under-main" data-path="all refusal" aria-hidden="true">
+              <svg viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 0V32M6 25l6 7 6-7" />
+              </svg>
+            </div>
+
+            <!-- STAGE 2 + REFUSAL FORK -->
+            <div class="flow-row flow-row--split" data-path="all refusal" id="stage-2">
+              <article class="stage-card">
+                <div class="stage-card__top">
+                  <div class="stage-card__id">
+                    <span class="stage-num">2</span>
+                    <div>
+                      <h3 class="stage-title">Offence Classification &amp; Initial Scrutiny</h3>
+                      <span class="stage-sub">Cyber Security Act, 2026 &mdash; Section 25 &amp; Section 46</span>
+                    </div>
+                  </div>
+                  <div class="chip-row">
+                    <span class="law-chip law-chip--ok">Cognizable &middot; Sec 46(1)</span>
+                    <span class="law-chip law-chip--warn">Bailable &middot; Sec 46(2)</span>
+                    <span class="law-chip">Compoundable* &middot; Sec 46(3)</span>
+                  </div>
+                </div>
+
+                <p class="stage-card__lead"><strong>Section 25(1)</strong> criminalises intentionally sending,
+                  publishing, spreading or threatening to share intimate, obscene or AI-generated/edited images, video,
+                  audio or graphics for <strong>sexual harassment, blackmail, revenge porn, sextortion or CSAM</strong>.
+                  Because <strong>Section 46(1)</strong> makes it <strong>cognizable</strong>, police are legally bound
+                  to register an FIR &mdash; they cannot simply &ldquo;dismiss&rdquo; a valid report.</p>
+
+                <details class="stage-detail" data-open-on="refusal">
+                  <summary>Statute &amp; survivor notes (Sec 25 &amp; Sec 46)</summary>
+                  <div class="stage-detail__body">
+                    <p><strong>*Bail &amp; settlement warning:</strong> Unlike the Pornography Control Act 2012
+                      (non-bailable), Section 25 of the 2026 Act is <strong>bailable</strong> (Sec 46(2)) and
+                      <strong>compoundable with court consent</strong> (Sec 46(3)). An accused person can secure bail as
+                      a right, and survivors may face family or community pressure to settle.</p>
+                    <p><span class="reality-flag">If stations push you away:</span> You may also escalate in writing to
+                      the Circle ASP or Superintendent of Police (SP), or use the <strong>Section 40(2) Cyber Tribunal
+                        affidavit route</strong> shown alongside.</p>
+                  </div>
+                </details>
+              </article>
+
+              <div class="branch-link branch-link--alarm" aria-hidden="true">
+                <svg class="branch-link__h" viewBox="0 0 44 32" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-dasharray="4 4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M0 16H40M33 10l7 6-7 6" />
+                </svg>
+                <svg class="branch-link__v" viewBox="0 0 24 28" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-dasharray="4 4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 0V24M6 18l6 6 6-6" />
+                </svg>
+              </div>
+
+              <aside class="branch-card branch-card--alarm" data-path="refusal refusal-focus"
+                aria-label="If the police station refuses to register the case">
+                <span class="branch-card__eyebrow">Detour &middot; Sec 40(2)</span>
+                <h4 class="branch-card__title">If the police station refuses</h4>
+                <p>Submit a written complaint with an <strong>affidavit</strong> stating police refused to take your
+                  case directly to the <strong>Cyber Tribunal</strong>. The Tribunal examines you and decides:</p>
+                <div class="fork-outcomes">
+                  <div class="fork-pill fork-pill--go">
+                    <span class="fork-pill__mark" aria-hidden="true">&#10003;</span>
+                    <span><strong>Satisfied:</strong> Orders a police officer to investigate (skips Step 3, enters
+                      <strong>Step 5</strong>).</span>
+                  </div>
+                  <div class="fork-pill fork-pill--stop">
+                    <span class="fork-pill__mark" aria-hidden="true">&times;</span>
+                    <span><strong>Not satisfied:</strong> Summarily dismisses the complaint.</span>
+                  </div>
+                </div>
+                <a class="branch-card__jump" href="#stage-5">Jump to Step 5 (Investigation) &rarr;</a>
+              </aside>
+            </div>
+
+            <div class="flow-arrow flow-arrow--under-main" data-path="all" aria-hidden="true">
+              <svg viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 0V32M6 25l6 7 6-7" />
+              </svg>
+              <span class="flow-arrow__tag">Police accept complaint</span>
+            </div>
+
+            <!-- STAGE 3 + DETOUR BYPASS RAIL -->
+            <div class="flow-row flow-row--split" data-path="all refusal" id="stage-3">
+              <article class="stage-card stage-card--dim-on-refusal">
+                <div class="stage-card__top">
+                  <div class="stage-card__id">
+                    <span class="stage-num">3</span>
+                    <div>
+                      <h3 class="stage-title">Case Registered (FIR Recorded)</h3>
+                      <span class="stage-sub">First Information Report opens the formal criminal case</span>
+                    </div>
+                  </div>
+                  <div class="chip-row">
+                    <span class="law-chip">CrPC Sec 154</span>
+                  </div>
+                </div>
+                <p class="stage-card__lead">The Officer-in-Charge records the FIR in writing, reads it back to you for
+                  your signature, and assigns a formal case number and investigating officer. Once recorded, the
+                  24-hour judicial safeguard clock begins immediately.</p>
+                <details class="stage-detail">
+                  <summary>What to check before you leave the station</summary>
+                  <div class="stage-detail__body">
+                    <p>Verify that the FIR states <strong>where you were</strong> when the harassment reached you
+                      (jurisdiction matters &mdash; <span data-cfg="survivor">Nadia</span> had to sign twice because
+                      the first draft omitted this), lists exact dates and URLs/handles, and ask for your <strong>FIR
+                        number and free copy</strong> under CrPC Sec 154.</p>
+                  </div>
+                </details>
+              </article>
+
+              <div aria-hidden="true"></div>
+
+              <div class="bypass-rail" data-path="refusal refusal-focus"
+                aria-label="Tribunal affidavit detour bypasses Stage 3 and Stage 4">
+                <svg viewBox="0 0 22 36" fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="4 4"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M11 0V32M5 25l6 7 6-7" />
+                </svg>
+                <span><strong>Sec 40(2) bypass:</strong> A Cyber Tribunal investigation order skips Steps 3 &amp; 4 and
+                  moves straight into <strong>Step 5</strong>.</span>
+              </div>
+            </div>
+
+            <div class="flow-arrow flow-arrow--under-main" data-path="all" aria-hidden="true">
+              <svg viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 0V32M6 25l6 7 6-7" />
+              </svg>
+              <span class="flow-arrow__tag">Within 24 hours of FIR</span>
+            </div>
+          </div>
+
+          <!-- ========== PHASE II: JUDICIAL CHECK & INVESTIGATION ========== -->
+          <div class="flow-phase flow-phase--2" id="phase-2">
+            <div class="flow-phase__head">
+              <span class="flow-phase__badge">Phase II</span>
+              <span class="flow-phase__title">Judicial Check &amp; Investigation</span>
+              <span class="flow-phase__line" aria-hidden="true"></span>
+            </div>
+
+            <!-- STAGE 4 + MAGISTRATE DECISION FORK -->
+            <div class="flow-row flow-row--split" data-path="all clocks" id="stage-4">
+              <article class="stage-card">
+                <div class="stage-card__top">
+                  <div class="stage-card__id">
+                    <span class="stage-num">4</span>
+                    <div>
+                      <h3 class="stage-title">Magistrate Screening &mdash; Dual 24-Hour Clock</h3>
+                      <span class="stage-sub">Mandatory early judicial check for Section 25 cases</span>
+                    </div>
+                  </div>
+                  <div class="chip-row">
+                    <span class="law-chip law-chip--clock">24h + 24h &middot; Sec 31(3)&ndash;(4)</span>
+                  </div>
+                </div>
+
+                <p class="stage-card__lead">A key safeguard added in the 2025&ndash;2026 law: for cases under Sections
+                  21, <strong>25</strong> and 26, police cannot hold a file or detain someone indefinitely without a
+                  Magistrate reviewing the complaint first.</p>
+
+                <div class="dual-clock">
+                  <div class="clock-box">
+                    <div class="clock-box__time">Within 24 hrs</div>
+                    <p class="clock-box__desc"><strong>Police &rarr; Magistrate</strong> (Sec 31(3)): Case file &amp;
+                      any arrested person must be produced before the Cognizance Magistrate.</p>
+                  </div>
+                  <div class="clock-box">
+                    <div class="clock-box__time">Next 24 hrs</div>
+                    <p class="clock-box__desc"><strong>Magistrate reviews</strong> (Sec 31(4)): Examines record and
+                      hears the victim or lawyer (if present) before ruling.</p>
+                  </div>
+                </div>
+
+                <details class="stage-detail" data-open-on="clocks">
+                  <summary>Statute &amp; survivor notes (Sec 31(3)&ndash;(4))</summary>
+                  <div class="stage-detail__body">
+                    <p><strong>Right to be heard:</strong> Under <strong>Section 31(4)</strong>, the Magistrate must
+                      consider the file, surrounding circumstances, and any statement from the aggrieved person or
+                      their lawyer before deciding whether the case moves forward.</p>
+                    <p>If you entered directly via a <strong>Cyber Tribunal order under Sec 40(2)</strong>, the
+                      Tribunal has already conducted initial scrutiny and ordered police investigation directly.</p>
+                  </div>
+                </details>
+              </article>
+
+              <div class="branch-link" aria-hidden="true">
+                <svg class="branch-link__h" viewBox="0 0 44 32" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M0 16H40M33 10l7 6-7 6" />
+                </svg>
+                <svg class="branch-link__v" viewBox="0 0 24 28" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 0V24M6 18l6 6 6-6" />
+                </svg>
+              </div>
+
+              <aside class="branch-card" aria-label="Magistrate screening outcomes">
+                <span class="branch-card__eyebrow">Magistrate Ruling &middot; Sec 31(4)</span>
+                <h4 class="branch-card__title">Two legal outcomes</h4>
+                <div class="fork-outcomes">
+                  <div class="fork-pill fork-pill--go">
+                    <span class="fork-pill__mark" aria-hidden="true">&#10003;</span>
+                    <span><strong>Order Investigation:</strong> Prima facie grounds exist &rarr; proceeds to
+                      <strong>Step 5</strong>.</span>
+                  </div>
+                  <div class="fork-pill fork-pill--stop">
+                    <span class="fork-pill__mark" aria-hidden="true">&times;</span>
+                    <span><strong>Dismiss &amp; Release:</strong> No basis &rarr; records written reasons, dismisses
+                      complaint &amp; releases any detainee.</span>
+                  </div>
+                </div>
+              </aside>
+            </div>
+
+            <div class="flow-arrow flow-arrow--under-main" data-path="all refusal" aria-hidden="true">
+              <svg viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 0V32M6 25l6 7 6-7" />
+              </svg>
+              <span class="flow-arrow__tag">Investigation ordered</span>
+            </div>
+
+            <!-- STAGE 5 + TECHNICAL ASSISTANCE BRIDGE -->
+            <div class="flow-row flow-row--split" data-path="all refusal clocks" id="stage-5">
+              <article class="stage-card">
+                <div class="stage-card__top">
+                  <div class="stage-card__id">
+                    <span class="stage-num">5</span>
+                    <div>
+                      <h3 class="stage-title">Police Investigation &amp; Digital Forensics</h3>
+                      <span class="stage-sub">Evidence collection, technical agencies &amp; statutory deadline</span>
+                    </div>
+                  </div>
+                  <div class="chip-row">
+                    <span class="law-chip">Sec 31&ndash;39</span>
+                    <span class="law-chip law-chip--clock">135 days max* &middot; Sec 32</span>
+                  </div>
+                </div>
+
+                <div class="channel-grid channel-grid--2x2">
+                  <div class="channel-tile">
+                    <div class="channel-tile__head">
+                      <span class="channel-tile__ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                      </span>
+                      <div>
+                        <div class="channel-tile__name">SI or Above</div>
+                        <div class="channel-tile__role">Sec 2(1)(<span lang="bn">দ</span>), 31</div>
+                      </div>
+                    </div>
+                    <p class="channel-tile__desc">Investigated by a Sub-Inspector or higher &mdash; or a
+                      Tribunal-ordered Joint Investigation Team.</p>
+                  </div>
+
+                  <div class="channel-tile">
+                    <div class="channel-tile__head">
+                      <span class="channel-tile__ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="12" cy="12" r="9" />
+                          <path d="M12 7v5l3 3" />
+                        </svg>
+                      </span>
+                      <div>
+                        <div class="channel-tile__name">NCSA &amp; NCERT</div>
+                        <div class="channel-tile__role">Sec 5, 9, 31(2)</div>
+                      </div>
+                    </div>
+                    <p class="channel-tile__desc">Technical &amp; cyber-incident backing from the National Cyber
+                      Security Agency and National CERT.</p>
+                  </div>
+
+                  <div class="channel-tile">
+                    <div class="channel-tile__head">
+                      <span class="channel-tile__ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="11" cy="11" r="7" />
+                          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                      </span>
+                      <div>
+                        <div class="channel-tile__name">Search &amp; Data Hold</div>
+                        <div class="channel-tile__role">Sec 33, 35&ndash;37</div>
+                      </div>
+                    </div>
+                    <p class="channel-tile__desc">Power to search, seize devices and order 90-day data preservation
+                      (up to 180 days by Tribunal).</p>
+                  </div>
+
+                  <div class="channel-tile">
+                    <div class="channel-tile__head">
+                      <span class="channel-tile__ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3" />
+                        </svg>
+                      </span>
+                      <div>
+                        <div class="channel-tile__name">Forensic Lab</div>
+                        <div class="channel-tile__role">Sec 2, 43</div>
+                      </div>
+                    </div>
+                    <p class="channel-tile__desc">Analysis at an authorised Digital Forensic Lab; resulting digital
+                      evidence is admissible in court.</p>
+                  </div>
+                </div>
+
+                <!-- Proportional Investigation Clock Ruler (Sec 32) -->
+                <div class="law-ruler" aria-label="Investigation timeline under Section 32: 90 days, plus 15 days, plus 30 days, totaling 135 days">
+                  <div class="law-ruler__top">
+                    <span class="law-ruler__label">Investigation clock &middot; Sec 32(1)</span>
+                    <span class="law-ruler__total">135 days*</span>
+                  </div>
+                  <div class="law-ruler__bar">
+                    <div class="law-ruler__seg law-ruler__seg--base" style="width:66.7%">90 days</div>
+                    <div class="law-ruler__seg law-ruler__seg--mid" style="width:11.1%">+15</div>
+                    <div class="law-ruler__seg law-ruler__seg--ext" style="width:22.2%">+30</div>
+                  </div>
+                  <div class="law-ruler__legend">
+                    <span><i class="law-ruler__sw" style="background:var(--tgi-deep-teal)"></i>90d initial</span>
+                    <span><i class="law-ruler__sw" style="background:var(--tgi-ocean)"></i>+15d controlling officer</span>
+                    <span><i class="law-ruler__sw" style="background:var(--tgi-mint)"></i>+30d Cyber Tribunal</span>
+                  </div>
+                </div>
+
+                <details class="stage-detail" data-open-on="clocks">
+                  <summary>Statute &amp; survivor notes (Sec 32, 36&ndash;37)</summary>
+                  <div class="stage-detail__body">
+                    <p><strong>*Technical-constraint exception (Sec 32(2)):</strong> If technical limitations prevent
+                      finishing within 90 + 15 + 30 = 135 days, the Tribunal may grant a further <em>reasonable
+                        extension</em>. (Note: the statutory middle extension is <strong>+15 days</strong>, not +45.)</p>
+                    <p><strong>Device safeguard (Sec 37):</strong> Investigators should avoid disrupting lawful use of
+                      your computer/phone and should only seize hardware if data cannot otherwise be accessed or risks
+                      destruction.</p>
+                  </div>
+                </details>
+              </article>
+
+              <div class="branch-link" aria-hidden="true">
+                <svg class="branch-link__h" viewBox="0 0 44 32" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-dasharray="4 4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 16H40M11 10l-7 6 7 6M33 10l7 6-7 6" />
+                </svg>
+                <svg class="branch-link__v" viewBox="0 0 24 28" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-dasharray="4 4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2V26M7 7l5-5 5 5M7 21l5 5 5-5" />
+                </svg>
+              </div>
+
+              <aside class="branch-card" aria-label="Mandatory assistance from service providers and entities">
+                <span class="branch-card__eyebrow">Cooperation &middot; Sec 38 &amp; 39</span>
+                <h4 class="branch-card__title">Service Providers, Entities &amp; CSOs</h4>
+                <p>When formally requested by the investigating officer, any <strong>person, entity or service
+                    provider</strong> (ISPs, telecoms, platforms, organisations) is <strong>legally obligated</strong>
+                  to provide information and technical assistance (Sec 38).</p>
+                <p>Assisting parties receive good-faith legal immunity and must keep all data strictly confidential
+                  (Sec 39; breach carries up to 2 years).</p>
+                <p><span class="reality-flag">Reality check:</span> Offshore platforms (such as Meta) sit outside
+                  domestic jurisdiction and often require formal international requests.</p>
+              </aside>
+            </div>
+
+            <div class="flow-arrow flow-arrow--under-main" data-path="all refusal" aria-hidden="true">
+              <svg viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 0V32M6 25l6 7 6-7" />
+              </svg>
+            </div>
+
+            <!-- STAGE 6 -->
+            <div class="flow-row" data-path="all refusal" id="stage-6">
+              <article class="stage-card">
+                <div class="stage-card__top">
+                  <div class="stage-card__id">
+                    <span class="stage-num">6</span>
+                    <div>
+                      <h3 class="stage-title">Police Report Submitted to Cyber Tribunal</h3>
+                      <span class="stage-sub">The Tribunal cannot open a trial without a written police report</span>
+                    </div>
+                  </div>
+                  <div class="chip-row">
+                    <span class="law-chip">Sec 40(4)</span>
+                  </div>
+                </div>
+                <p class="stage-card__lead">At the end of the investigation, the police officer (or Joint Investigation
+                  Team) files a <strong>written report</strong> before the Cyber Tribunal. Under <strong>Section
+                    40(4)</strong>, the Tribunal cannot take cognizance of an offence without it.</p>
+                <div class="outcome-grid">
+                  <div class="outcome-box outcome-box--accent">
+                    <div class="outcome-box__label">If evidence supports charges</div>
+                    <h4 class="outcome-box__head">Charge Sheet filed</h4>
+                    <p>Tribunal takes cognizance, frames charges, and sets trial dates (proceeds to Step 7).</p>
+                  </div>
+                  <div class="outcome-box outcome-box--reality">
+                    <div class="outcome-box__label">If police recommend closing</div>
+                    <h4 class="outcome-box__head">Final Report &rarr; Naraji option</h4>
+                    <p>If police seek to drop the case, you have the right to file a protest petition
+                      (<em>Naraji</em>) asking the Tribunal for further investigation.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="flow-arrow flow-arrow--center" data-path="all" aria-hidden="true">
+              <svg viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 0V32M6 25l6 7 6-7" />
+              </svg>
+              <span class="flow-arrow__tag">Charge sheet accepted</span>
+            </div>
+          </div>
+
+          <!-- ========== PHASE III: TRIAL & VERDICT ========== -->
+          <div class="flow-phase flow-phase--3" id="phase-3">
+            <div class="flow-phase__head">
+              <span class="flow-phase__badge">Phase III</span>
+              <span class="flow-phase__title">Trial &amp; Judgement</span>
+              <span class="flow-phase__line" aria-hidden="true"></span>
+            </div>
+
+            <!-- STAGE 7 -->
+            <div class="flow-row" data-path="all clocks" id="stage-7">
+              <article class="stage-card">
+                <div class="stage-card__top">
+                  <div class="stage-card__id">
+                    <span class="stage-num">7</span>
+                    <div>
+                      <h3 class="stage-title">Trial Before the Cyber Tribunal</h3>
+                      <span class="stage-sub">Exclusive jurisdiction, digital evidence &amp; 180-working-day limit</span>
+                    </div>
+                  </div>
+                  <div class="chip-row">
+                    <span class="law-chip">Sec 41&ndash;45</span>
+                    <span class="law-chip law-chip--clock">270 working days max &middot; Sec 45</span>
+                  </div>
+                </div>
+
+                <div class="channel-grid">
+                  <div class="channel-tile">
+                    <div class="channel-tile__head">
+                      <span class="channel-tile__ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M14 13l-8.5 8.5a2.12 2.12 0 0 1-3-3L11 10" />
+                          <path d="M16 16l6-6M8 8l6-6M9 7l8 8" />
+                        </svg>
+                      </span>
+                      <div>
+                        <div class="channel-tile__name">Sessions Trial Rules</div>
+                        <div class="channel-tile__role">Sec 42 &middot; CrPC Ch. XXIII</div>
+                      </div>
+                    </div>
+                    <p class="channel-tile__desc">Cyber Tribunals exercise Court of Session powers under CrPC Chapter
+                      XXIII, the Evidence Act 1872 and ICT Act 2006 s.69.</p>
+                  </div>
+
+                  <div class="channel-tile">
+                    <div class="channel-tile__head">
+                      <span class="channel-tile__ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <polyline points="16 11 18 13 22 9" />
+                        </svg>
+                      </span>
+                      <div>
+                        <div class="channel-tile__name">Forensics &amp; Experts</div>
+                        <div class="channel-tile__role">Sec 43 &amp; Sec 44(1)</div>
+                      </div>
+                    </div>
+                    <p class="channel-tile__desc">Lab-verified digital evidence carries legal weight (Sec 43); Tribunal
+                      may call independent cyber/forensic experts (Sec 44(1)).</p>
+                  </div>
+
+                  <div class="channel-tile channel-tile--escalate">
+                    <div class="channel-tile__head">
+                      <span class="channel-tile__ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="3" y="4" width="18" height="18" rx="2" />
+                          <line x1="16" y1="2" x2="16" y2="6" />
+                          <line x1="8" y1="2" x2="8" y2="6" />
+                          <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                      </span>
+                      <div>
+                        <div class="channel-tile__name">Track Your Dates</div>
+                        <div class="channel-tile__role">Avoid Witness Warrants</div>
+                      </div>
+                    </div>
+                    <p class="channel-tile__desc">Stay in touch with your lawyer or court clerk after the charge sheet
+                      &mdash; undelivered summons can lead to warrants against complainants.</p>
+                  </div>
+                </div>
+
+                <!-- Proportional Trial Clock Ruler (Sec 45) -->
+                <div class="law-ruler" aria-label="Trial timeline under Section 45: 180 working days plus up to 90 working days, totaling 270 working days">
+                  <div class="law-ruler__top">
+                    <span class="law-ruler__label">Trial clock from charge framing &middot; Sec 45(1)&ndash;(2)</span>
+                    <span class="law-ruler__total">270 working days</span>
+                  </div>
+                  <div class="law-ruler__bar">
+                    <div class="law-ruler__seg law-ruler__seg--base" style="width:66.7%">180 working days</div>
+                    <div class="law-ruler__seg law-ruler__seg--ext" style="width:33.3%">+90 max</div>
+                  </div>
+                  <div class="law-ruler__legend">
+                    <span><i class="law-ruler__sw" style="background:var(--tgi-deep-teal)"></i>180 working days base</span>
+                    <span><i class="law-ruler__sw" style="background:var(--tgi-mint)"></i>+90 working days w/ recorded reasons</span>
+                    <span>Overdue? Judge reports to High Court Division (Sec 45(3))</span>
+                  </div>
+                </div>
+
+                <details class="stage-detail" data-open-on="clocks">
+                  <summary>Statute &amp; institutional notes (Sec 44(2) &amp; Sec 45(3))</summary>
+                  <div class="stage-detail__body">
+                    <p><strong>Specialist training (Sec 44(2)):</strong> The Government and NCSA are authorised to
+                      provide specialised training in computer science, digital forensics and data protection to
+                      judges, prosecutors and officials enforcing the Act.</p>
+                    <p><strong>Delay oversight (Sec 45(3)):</strong> If a Cyber Tribunal fails to conclude a trial
+                      within 180 + 90 working days, the judge must record reasons in writing and report the delay to
+                      the High Court Division.</p>
+                  </div>
+                </details>
+              </article>
+            </div>
+
+            <div class="flow-arrow flow-arrow--center" data-path="all" aria-hidden="true">
+              <svg viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 0V32M6 25l6 7 6-7" />
+              </svg>
+            </div>
+
+            <!-- STAGE 8 -->
+            <div class="flow-row" data-path="all" id="stage-8">
+              <article class="stage-card">
+                <div class="stage-card__top">
+                  <div class="stage-card__id">
+                    <span class="stage-num">8</span>
+                    <div>
+                      <h3 class="stage-title">Judgement, Penalty &amp; Victim Compensation</h3>
+                      <span class="stage-sub">Higher statutory penalties when the survivor is a woman or child</span>
+                    </div>
+                  </div>
+                  <div class="chip-row">
+                    <span class="law-chip">Sec 25(3)</span>
+                    <span class="law-chip law-chip--ok">Compensation &middot; Sec 30</span>
+                  </div>
+                </div>
+
+                <div class="outcome-grid">
+                  <div class="outcome-box">
+                    <div class="outcome-box__label">Conviction or Acquittal &middot; Sec 25(2)&ndash;(3)</div>
+                    <h4 class="outcome-box__head">Up to 5 yrs &amp;/or Tk 20 lakh</h4>
+                    <p>When a Section 25 offence targets a <strong>woman or child under 18</strong>, penalty rises to
+                      up to <strong>5 years&rsquo; imprisonment</strong> and/or <strong>Tk 20 lakh fine</strong>
+                      (general cases: up to 2 years / Tk 10 lakh).</p>
+                  </div>
+                  <div class="outcome-box outcome-box--accent">
+                    <div class="outcome-box__label">Restorative remedy &middot; Sec 30</div>
+                    <h4 class="outcome-box__head">Compensation to Survivor</h4>
+                    <p>Upon conviction, the Tribunal may order compensation matching the harm caused &mdash; paid
+                      directly out of the fine or in addition to it.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="flow-arrow flow-arrow--center" data-path="all" aria-hidden="true">
+              <svg viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 0V32M6 25l6 7 6-7" />
+              </svg>
+              <span class="flow-arrow__tag">If aggrieved by verdict</span>
+            </div>
+          </div>
+
+          <!-- ========== PHASE IV: APPEAL ========== -->
+          <div class="flow-phase flow-phase--4" id="phase-4">
+            <div class="flow-phase__head">
+              <span class="flow-phase__badge">Phase IV</span>
+              <span class="flow-phase__title">Appeal</span>
+              <span class="flow-phase__line" aria-hidden="true"></span>
+            </div>
+
+            <!-- STAGE 9 -->
+            <div class="flow-row" data-path="all" id="stage-9">
+              <article class="stage-card">
+                <div class="stage-card__top">
+                  <div class="stage-card__id">
+                    <span class="stage-num">9</span>
+                    <div>
+                      <h3 class="stage-title">Appeal Against the Verdict</h3>
+                      <span class="stage-sub">What the statute names vs. which court actually hears the appeal</span>
+                    </div>
+                  </div>
+                  <div class="chip-row">
+                    <span class="law-chip">Sec 41(2)</span>
+                    <span class="law-chip law-chip--dark">ICT Act s.84</span>
+                  </div>
+                </div>
+
+                <div class="outcome-grid">
+                  <div class="outcome-box">
+                    <div class="outcome-box__label">On paper &middot; Sec 41(2)</div>
+                    <h4 class="outcome-box__head">Cyber Appellate Tribunal</h4>
+                    <p>Section 41(2) grants an aggrieved party the right to appeal to the Cyber Appellate Tribunal
+                      defined under Section 82 of the ICT Act, 2006.</p>
+                  </div>
+                  <div class="outcome-box outcome-box--reality">
+                    <div class="outcome-box__label">In practice today &middot; ICT Act s.84</div>
+                    <h4 class="outcome-box__head">High Court Division (Supreme Court)</h4>
+                    <p>Because Bangladesh has <strong>not yet constituted</strong> a Cyber Appellate Tribunal, appeals
+                      from Cyber Tribunal judgements go directly to the <strong>High Court Division</strong> under ICT
+                      Act s.84 (applied via CSA 2026 s.42(1)).</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ TWO-LAW COMPARISON CARD ============ -->
+        <aside class="law-compare" aria-label="Comparison of Bangladesh laws for online sexual harassment">
+          <div class="law-compare__head">
+            <p class="law-compare__kicker">Context &middot; Two Parallel Laws</p>
+            <h3>Cyber Security Act, 2026 vs. Pornography Control Act, 2012</h3>
+            <p class="law-compare__intro"><span data-cfg="survivor">Nadia</span>&rsquo;s 2021 case was filed under the
+              2012 Act. Both statutes remain in force &mdash; and which section police cite changes bail rules,
+              investigation deadlines and which court tries the case.</p>
+          </div>
+          <div class="law-compare__grid">
+            <div class="law-box law-box--current">
+              <span class="law-box__tag">Primary Cyber Law Today</span>
+              <h4>Cyber Security Act, 2026 (Sec 25)</h4>
+              <dl>
+                <dt>Covers</dt>
+                <dd>Online sexual harassment, blackmail, sextortion, revenge porn, CSAM &amp; AI-edited/deepfake abuse
+                  (or threats to share).</dd>
+                <dt>Bail status</dt>
+                <dd>Cognizable, <strong>bailable</strong> &amp; compoundable with court consent (Sec 46).</dd>
+                <dt>Investigation</dt>
+                <dd>90 + 15 + 30 = <strong>135 days</strong> (plus technical extension, Sec 32).</dd>
+                <dt>Trial court</dt>
+                <dd><strong>Cyber Tribunal</strong> (180 + 90 working days, Sec 41 &amp; 45).</dd>
+              </dl>
+            </div>
+
+            <div class="law-box">
+              <span class="law-box__tag">Used in Nadia&rsquo;s 2021 Case</span>
+              <h4>Pornography Control Act, 2012</h4>
+              <dl>
+                <dt>Covers</dt>
+                <dd>Production, storage, supply, distribution or harassment using pornographic material (Sec 8).</dd>
+                <dt>Bail status</dt>
+                <dd>Cognizable &amp; <strong>non-bailable</strong> (Sec 10).</dd>
+                <dt>Investigation</dt>
+                <dd>30 + 15 + 30 = <strong>75 working days</strong> max (Sec 5).</dd>
+                <dt>Trial court</dt>
+                <dd>Designated Sessions / Judicial Magistrate courts (depending on offence).</dd>
+              </dl>
+            </div>
+          </div>
+          <p class="law-compare__note"><strong>Legal note:</strong> This roadmap summarises Bangladeshi statutory
+            procedure as of 2026 (Cyber Security Act, 2026 [Act No. 81 of 2026], CrPC 1898, ICT Act 2006 &amp;
+            Pornography Control Act 2012) for public information and is not formal legal advice. Consult a qualified
+            lawyer or legal aid organisation for your specific case.</p>
+        </aside>
       </div>
     </section>
 
@@ -2147,9 +3046,14 @@
             <li data-status="TO VERIFY">IRB Canada via ecoi.net, <a href="https://www.ecoi.net/en/document/2128304.html"
                 rel="noopener">Bangladesh: Police general diaries (GD) ... (2023–June 2025)</a> (2025). <span
                 class="src-flag">[unverified]</span></li>
-            <li data-status="VERIFIED in Digital-Frontier STATUTE-CHE">Govt of Bangladesh, <a
-                href="https://bdlaws.minlaw.gov.bd/" rel="noopener">Cyber Protection Act (as amended 2026)</a>
-              (2025-2026).</li>
+            <li data-status="VERIFIED 2026-11-23 (bdlaws.minlaw.gov.bd)">Govt of Bangladesh, <a
+                href="https://bdlaws.minlaw.gov.bd/" rel="noopener">Cyber Security Act, 2026 (সাইবার সুরক্ষা আইন, ২০২৬;
+                Act No. 81 of 2026)</a> — s.2, s.5, s.9, s.25, s.30&ndash;46 (gazetted 10 April 2026; effective 21 May
+              2025).</li>
+            <li data-status="VERIFIED 2026-11-23 (bdlaws.minlaw.gov.bd)">Govt of Bangladesh, <a
+                href="https://bdlaws.minlaw.gov.bd/" rel="noopener">Information and Communication Technology Act, 2006</a>
+              — s.69, s.82&ndash;84; and <a href="https://bdlaws.minlaw.gov.bd/act-75.html" rel="noopener">Code of
+                Criminal Procedure, 1898</a> — s.154 &amp; Ch. XXIII.</li>
           </ol>
         </div>
       </div>
