@@ -4,9 +4,8 @@
 export const CFG = {
   survivor: 'Nadia',             // placeholder name for the survivor
   accused: 'Sk Shahed',          // Facebook account name of the accused (trial ongoing)
-  siGd: 'SI Amir Sohel',         // officer in charge of the GD
-  siCase: 'SI Prosenjit',        // SI in charge of the case
-  adc: 'ADC Taimur',
+  siCase: 'the SI',              // SI in charge of the case (unnamed)
+  adc: 'The ADC',                // ADC at Mirpur DC office (unnamed)
   callerNumber: '+880 1748-1•••••',
   day1: '2021-10-21',
 };
