@@ -64,7 +64,7 @@ html:not(.js):not(.reduced) .road__band{max-width:560px}
 .js .road .scene__steps .step:last-child:not(:empty){margin-bottom:0}
 @media (min-width:900px){
   .js .road{display:block;max-width:none}
-  .js .road .scene__steps{margin-top:calc(var(--vh,1vh)*-100 + 30px);padding-left:max(24px,calc(50vw - 680px))}
+  .js .road .scene__steps{margin-top:calc(var(--vh,1vh)*-100 + 30px);padding-top:0;padding-left:max(24px,calc(50vw - 680px))}
   .js .road .step{margin-left:0}
   .js .road__stage{height:56%}
   .js .road__band{top:56%;height:44%}

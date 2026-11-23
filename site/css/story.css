@@ -78,10 +78,10 @@ strong,b{font-weight:700}
 .scene{position:relative;margin:var(--space-6) 0}
 .scene__sticky{position:relative;padding:var(--space-5) var(--space-4)}
 .js .scene__sticky{position:-webkit-sticky;position:sticky;top:30px;height:calc(var(--vh,1vh)*100 - 30px);display:flex;align-items:center;justify-content:center;padding:var(--space-4)}
-.js .scene__steps{position:relative;z-index:2;margin-top:calc(var(--vh,1vh)*-100 + 30px);pointer-events:none}
+.js .scene__steps{position:relative;z-index:2;margin-top:0;padding-top:8vh;pointer-events:none}
 .step{width:calc(100% - 2rem);max-width:24rem;margin:0 auto var(--space-5);padding:var(--space-4) var(--space-5);background:#fff;color:var(--text);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);pointer-events:auto;position:relative}
 .js .step{margin-bottom:60vh}
-.js .step:first-child{margin-top:35vh}
+.js .step:first-child{margin-top:0}
 .step:empty{display:none}
 .js .step:empty{display:block;background:none;box-shadow:none;padding:0;height:1px;margin-bottom:55vh}
 .night .step{background:rgba(16,50,52,.94);color:var(--on-dark-muted)}

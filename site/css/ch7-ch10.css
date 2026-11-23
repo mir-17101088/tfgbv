@@ -56,7 +56,7 @@ html:not(.js) .wait7__art{flex:0 0 auto;height:min(80vw,380px)}
 .js .scene--crowd{display:block;max-width:none;margin:0}
 #ch10{padding-bottom:0}
 .js .scene--crowd .scene__sticky{display:block;padding:0;overflow:hidden}
-.js #ch10 .scene__steps{margin-top:calc(var(--vh,1vh)*-100 + 30px);padding:0 0 1px}
+.js #ch10 .scene__steps{margin-top:0;padding:8vh 0 1px}
 .js #ch10 .scene__steps .step:last-child{margin-bottom:var(--space-5)}
 .crowd__title{position:relative;z-index:1;padding:var(--space-5) var(--space-4) 0;max-width:var(--measure);margin:0 auto}
 .js .crowd__title{position:absolute;top:0;left:0;right:0;max-width:none;text-shadow:0 1px 12px #0A2223,0 0 4px #0A2223}
@@ -82,7 +82,7 @@ html:not(.js) .wait7__art{flex:0 0 auto;height:min(80vw,380px)}
 .dots__fig{font:800 clamp(2.25rem,9vw,3.5rem)/1.1 var(--font-display);display:block;margin:var(--space-2) 0 0;color:#fff;letter-spacing:-.02em}
 .dots__label{font-size:.9375rem}
 @media (min-width:900px){
-  .js #ch10 .scene__steps{width:42%;padding:0 var(--space-6) 1px var(--space-8)}
+  .js #ch10 .scene__steps{width:42%;margin-top:calc(var(--vh,1vh)*-100 + 30px);padding:0 var(--space-6) 1px var(--space-8)}
   .js #ch10 .step{margin-left:0}
   .js #ch10 .scene__steps .step:last-child{margin-bottom:calc(var(--vh,1vh)*50 - 185px)}
   .js .crowd__title{padding:var(--space-6) var(--space-8) 0}
